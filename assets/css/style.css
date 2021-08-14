@@ -518,7 +518,9 @@ ul {
 }
 
 .main {
-    background-color: silver;
+    background-image: './../images/main-bg.jpg';
+    background-size: cover;
+    background-position: 62% 0;
     color: #fff;
 }
 
@@ -539,6 +541,21 @@ ul {
     color: #fff;
     max-width: 247px;
     margin-top: -6px;
+}
+
+@media screen and (min-width: 768px) {
+    .main__title {
+        max-width: 596px;
+        font-size: 40px;
+        line-height: 49px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .main__title {
+        max-width: 887px;
+        width: 100%;
+    }
 }
 
 .main__title span {
