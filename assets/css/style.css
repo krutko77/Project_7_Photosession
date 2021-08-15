@@ -347,7 +347,9 @@ template {
 }
 
 .header .container, .main .container {
+    max-width: 1140px;
     padding: 0 15px;
+    margin: 0 auto;
 }
 
 @media screen and (min-width: 576px) {
@@ -362,10 +364,9 @@ template {
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1280px) {
     .header .container, .main .container {
         padding: 0 70px;
-        width: 1140px;
     }
 }
 
@@ -412,6 +413,10 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+body {
+    min-width: 320px;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -429,10 +434,6 @@ ul {
     .header {
         box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
     }
-}
-
-.header .container {
-    margin: 0 auto;
 }
 
 .header__inner {
@@ -518,10 +519,16 @@ ul {
 }
 
 .main {
-    background-image: url("./../images/main-bg.jpg");
+    background-image: url("./../images/main-bg-1.jpg");
     background-size: cover;
     background-position: 62% 0;
     color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+    .main {
+        background-position: center;
+    }
 }
 
 .main__inner {
@@ -534,13 +541,19 @@ ul {
     height: 655px;
 }
 
+@media screen and (min-width: 768px) {
+    .main__inner {
+        height: 840px;
+    }
+}
+
 .main__title {
     font-size: 32px;
     font-weight: 700;
     line-height: 39px;
     color: #fff;
     max-width: 247px;
-    margin-top: -6px;
+    margin: -6px 0 0px;
 }
 
 @media screen and (min-width: 768px) {
@@ -572,8 +585,13 @@ ul {
     display: flex;
     -ms-flex-pack: distribute;
     justify-content: space-around;
-    padding: 6px 15px;
+    padding: 10px 15px;
     margin-left: -5px;
+}
+
+.main__price-label {
+    letter-spacing: 1.5px;
+    margin-bottom: 5px;
 }
 
 .main__wrapper {
@@ -602,7 +620,7 @@ ul {
     -webkit-filter: drop-shadow(0px 4px 15px rgba(255, 255, 255, 0.25)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
     filter: drop-shadow(0px 4px 15px rgba(255, 255, 255, 0.25)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
     max-height: 47px;
-    margin-top: 10px;
+    margin-top: 5px;
     -webkit-transform: translateX(4px);
     transform: translateX(4px);
 }
