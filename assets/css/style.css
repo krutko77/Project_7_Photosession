@@ -414,7 +414,7 @@ body {
 }
 
 body {
-    min-width: 320px;
+    min-width: 300px;
 }
 
 a {
@@ -430,7 +430,7 @@ ul {
     background-color: #fff;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
     .header {
         box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
     }
@@ -446,7 +446,7 @@ ul {
     height: 60px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
     .header__inner {
         height: 100px;
     }
@@ -463,13 +463,13 @@ ul {
     margin-right: 45px;
 }
 
-@media screen and (min-width: 576px) {
+@media (min-width: 576px) {
     .header__logo {
         margin-right: 23px;
     }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
     .header__logo {
         height: 36px;
     }
@@ -482,7 +482,7 @@ ul {
     color: #5286EC;
 }
 
-@media screen and (min-width: 576px) {
+@media (min-width: 576px) {
     .header__city-link {
         display: none;
     }
@@ -499,7 +499,7 @@ ul {
     color: #B3B3B3;
 }
 
-@media screen and (min-width: 576px) {
+@media (min-width: 576px) {
     .header__phone {
         display: block;
     }
@@ -512,20 +512,20 @@ ul {
     color: #37373F;
 }
 
-@media screen and (min-width: 1280px) {
+@media (min-width: 1280px) {
     .header__user {
         display: none;
     }
 }
 
 .main {
-    background-image: url("./../images/main-bg-1.jpg");
+    background-image: url("./../images/main-bg.jpg");
     background-size: cover;
     background-position: 62% 0;
     color: #fff;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
     .main {
         background-position: center;
     }
@@ -541,7 +541,7 @@ ul {
     height: 655px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
     .main__inner {
         height: 840px;
     }
@@ -556,7 +556,7 @@ ul {
     margin: -6px 0 0px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
     .main__title {
         max-width: 596px;
         font-size: 40px;
@@ -564,7 +564,7 @@ ul {
     }
 }
 
-@media screen and (min-width: 1280px) {
+@media (min-width: 1280px) {
     .main__title {
         max-width: 887px;
         width: 100%;
