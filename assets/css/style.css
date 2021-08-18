@@ -347,7 +347,7 @@ template {
 }
 
 .header .container, .main .container, .grid .container {
-    max-width: 1140px;
+    max-width: 1280px;
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -655,11 +655,38 @@ ul {
     }
 }
 
+@media (min-width: 1280px) {
+    .grid__inner {
+        grid-template-columns: 570px 570px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .grid__item-1 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+}
+
+@media (min-width: 1280px) {
+    .grid__item-2 {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+    }
+}
+
+@media (min-width: 1280px) {
+    .grid__item-3 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+}
+
 .grid__title {
     width: 175px;
     margin: 0 auto 15px;
     font-size: 28px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 32px;
     color: #37373F;
 }
@@ -667,8 +694,8 @@ ul {
 .grid__img {
     -o-object-fit: cover;
     object-fit: cover;
-    max-width: 100%;
-    margin: 0 auto 30px;
+    width: 100%;
+    margin-bottom: 30px;
 }
 
 .grid .text {
@@ -720,7 +747,7 @@ ul {
     margin-bottom: 0;
 }
 
-.grid__list-item--1, .grid__list-item--2, .grid__list-item--3, .grid__list-item--4, .grid__text-2, .grid__wrap {
+.grid__list-item--1, .grid__list-item--2, .grid__list-item--3, .grid__list-item--4, .grid__text-2-wrap, .grid__text-2 {
     position: relative;
 }
 
@@ -809,7 +836,7 @@ ul {
     left: 0px;
     width: calc(100vw - 30px);
     height: 5px;
-    background: url("./../images/grid-line-768.png") no-repeat;
+    background: url("./../images/grid-line.png") no-repeat;
 }
 
 @media (min-width: 576px) {
@@ -821,8 +848,13 @@ ul {
 
 @media (min-width: 768px) {
     .grid__text-2-wrap::before {
-        top: -33px;
         width: 670px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .grid__text-2-wrap::before {
+        width: 560px;
     }
 }
 
@@ -833,7 +865,7 @@ ul {
     left: 0px;
     width: calc(100vw - 30px);
     height: 5px;
-    background: url("./../images/grid-line-768.png") no-repeat;
+    background: url("./../images/grid-line.png") no-repeat;
 }
 
 @media (min-width: 576px) {
@@ -845,8 +877,13 @@ ul {
 
 @media (min-width: 768px) {
     .grid__text-2-wrap::after {
-        top: 53px;
         width: 670px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .grid__text-2-wrap::after {
+        width: 560px;
     }
 }
 
