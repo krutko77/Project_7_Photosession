@@ -371,33 +371,40 @@ template {
 }
 
 @font-face {
-    font-family: "MontserratRegular";
+    font-family: "Montserrat-400";
   src: url("./../fonts/Montserrat-Regular.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "MontserratMedium";
+    font-family: "Montserrat-500";
   src: url("./../fonts/Montserrat-Medium.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "MontserratSemiBold";
+    font-family: "Montserrat-600";
   src: url("./../fonts/Montserrat-SemiBold.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "MontserratBold";
+    font-family: "Montserrat-700";
   src: url("./../fonts/Montserrat-Bold.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "MontserratExtraBold";
+    font-family: "Montserrat-800";
   src: url("./../fonts/Montserrat-ExtraBold.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "MontserratBlack";
+    font-family: "Montserrat-900";
   src: url("./../fonts/Montserrat-Black.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "FontAwesome";
+  src: url("./../fonts/fontawesome-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 *,
@@ -411,6 +418,8 @@ template {
 html,
 body {
     font-family: 'Montserrat', sans-serif;
+    font-family: "FontAwesome";
+    min-width: 320px;
 }
 
 a {
@@ -461,19 +470,19 @@ ul {
 
 @media (min-width: 576px) {
     .header__logo {
-        margin-right: 23px;
+        margin-right: 35px;
     }
 }
 
 @media (min-width: 768px) {
     .header__logo {
-        height: 36px;
+        height: 25px;
     }
 }
 
 .header__city-link {
     font-size: 14px;
-    font-weight: 400;
+    font-family: 400;
     line-height: 17px;
     color: #5286EC;
 }
@@ -490,7 +499,7 @@ ul {
 
 .header__phone span {
     font-size: 14px;
-    font-weight: 400;
+    font-family: 400;
     line-height: 17px;
     color: #B3B3B3;
 }
@@ -501,9 +510,9 @@ ul {
     }
 }
 
-.header__phone__link {
+.header__phone-link {
     font-size: 14px;
-    font-weight: 400;
+    font-family: 400;
     line-height: 17px;
     color: #37373F;
 }
@@ -524,7 +533,20 @@ ul {
 
 @media (min-width: 768px) {
     .main {
+        background-size: auto 143%;
+        background-position: 56% 50%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .main {
         background-position: center;
+    }
+}
+
+@media (min-width: 1440px) {
+    .main {
+        background-size: auto 154%;
     }
 }
 
@@ -546,11 +568,11 @@ ul {
 
 .main__title {
     font-size: 32px;
-    font-weight: 700;
+    font-family: "Montserrat-700";
     line-height: 39px;
     color: #fff;
     max-width: 247px;
-    margin: -6px 0 0px;
+    margin: 12px 0 0px;
 }
 
 @media (min-width: 768px) {
@@ -558,6 +580,7 @@ ul {
         max-width: 596px;
         font-size: 40px;
         line-height: 49px;
+        margin: 30px 0 0px;
     }
 }
 
@@ -577,6 +600,7 @@ ul {
     width: 208px;
     background-image: url(./../images/price-box.svg);
     background-repeat: no-repeat;
+    background-size: cover;
     margin: 36px 0 14px;
     display: -ms-flexbox;
     display: flex;
@@ -586,9 +610,31 @@ ul {
     margin-left: -5px;
 }
 
+@media (min-width: 768px) {
+    .main__price-box {
+        width: 230px;
+        height: 100px;
+        margin: 20px 0 14px;
+    }
+}
+
 .main__price-label {
     letter-spacing: 1.5px;
     margin-bottom: 5px;
+    font-size: 18px;
+    font-family: "Montserrat-400";
+    line-height: inherit;
+    color: inherit;
+}
+
+@media (min-width: 768px) {
+    .main__price-label {
+        letter-spacing: -0.5px;
+        font-size: 20px;
+        font-family: "Montserrat-400";
+        line-height: inherit;
+        color: inherit;
+    }
 }
 
 .main__wrapper {
@@ -598,18 +644,20 @@ ul {
     flex-direction: column;
 }
 
-.main__priceLabel {
-    font-size: 18px;
-    font-weight: 400;
+.main__price {
+    font-size: 30px;
+    font-family: "Montserrat-800";
     line-height: inherit;
     color: inherit;
 }
 
-.main__price {
-    font-size: 30px;
-    font-weight: 800;
-    line-height: inherit;
-    color: inherit;
+@media (min-width: 768px) {
+    .main__price {
+        font-size: 35px;
+        font-family: "Montserrat-800";
+        line-height: inherit;
+        color: inherit;
+    }
 }
 
 .main__percent {
@@ -622,6 +670,15 @@ ul {
     transform: translateX(4px);
 }
 
+@media (min-width: 768px) {
+    .main__percent {
+        width: 53px;
+        max-height: 53px;
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+}
+
 .main__btn {
     width: 275px;
     height: 68px;
@@ -629,7 +686,7 @@ ul {
     border-radius: 7px;
     background-color: transparent;
     font-size: 16px;
-    font-weight: 900;
+    font-family: "Montserrat-900";
     line-height: 20px;
     color: white;
     -webkit-filter: drop-shadow(0px 4px 70px rgba(255, 255, 255, 0.7)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
@@ -640,6 +697,17 @@ ul {
 
 .main__btn:hover {
     color: #727272;
+}
+
+@media (min-width: 768px) {
+    .main__btn {
+        width: 305px;
+        height: 68px;
+        font-size: 18px;
+        font-family: "Montserrat-900";
+        line-height: 22px;
+        color: white;
+    }
 }
 
 .grid__inner {
@@ -672,6 +740,7 @@ ul {
     .grid__item-2 {
         grid-column: 2 / 3;
         grid-row: 1 / 3;
+        padding: 35px 0 0 15px;
     }
 }
 
@@ -686,9 +755,27 @@ ul {
     width: 175px;
     margin: 0 auto 15px;
     font-size: 28px;
-    font-weight: 500;
+    font-family: "Montserrat-500";
     line-height: 32px;
     color: #37373F;
+}
+
+@media (min-width: 768px) {
+    .grid__title {
+        font-size: 40px;
+        font-family: "Montserrat-500";
+        line-height: 48px;
+        color: #37373F;
+        width: 255px;
+        margin: 10px auto 30px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .grid__title {
+        width: 255px;
+        margin: 30px 0 10px;
+    }
 }
 
 .grid__img {
@@ -698,9 +785,21 @@ ul {
     margin-bottom: 30px;
 }
 
+@media (min-width: 576px) {
+    .grid__img {
+        margin-bottom: 35px;
+    }
+}
+
+@media (min-width: 768px) {
+    .grid__img {
+        margin-bottom: 42px;
+    }
+}
+
 .grid .text {
     font-size: 14px;
-    font-weight: 400;
+    font-family: "Montserrat-400";
     line-height: 21px;
     color: #37373F;
 }
@@ -708,9 +807,15 @@ ul {
 @media (min-width: 576px) {
     .grid .text {
         font-size: 18px;
-        font-weight: 400;
+        font-family: "Montserrat-400";
         line-height: 26px;
         color: #37373F;
+    }
+}
+
+@media (min-width: 768px) {
+    .grid .text {
+        max-width: 490px;
     }
 }
 
@@ -727,7 +832,7 @@ ul {
 .grid__list {
     margin-bottom: 50px;
     font-size: 14px;
-    font-weight: 400;
+    font-family: "Montserrat-400";
     line-height: 20px;
     color: #37373F;
 }
@@ -747,7 +852,7 @@ ul {
     margin-bottom: 0;
 }
 
-.grid__list-item--1, .grid__list-item--2, .grid__list-item--3, .grid__list-item--4, .grid__text-2-wrap, .grid__text-2 {
+.grid__list-item--1, .grid__list-item--2, .grid__list-item--3, .grid__list-item--4, .grid__text-2-wrap, .grid__text-2-stars, .grid__text-2 {
     position: relative;
 }
 
@@ -792,15 +897,20 @@ ul {
 }
 
 .grid__text-2 {
-    padding-left: 47px;
-    margin-bottom: 28px;
+    margin-right: 10px;
+}
+
+@media (min-width: 576px) {
+    .grid__text-2 {
+        display: inline-block;
+    }
 }
 
 .grid__text-2::before {
     content: "";
     position: absolute;
     top: 2px;
-    left: 0;
+    left: -45px;
     width: 38px;
     height: 42px;
     background: url("./../images/grid-img-5.png") no-repeat;
@@ -812,21 +922,8 @@ ul {
     }
 }
 
-.grid__text-2::after {
-    content: "";
-    position: absolute;
-    top: 26px;
-    left: 50px;
-    width: 120px;
-    height: 20px;
-    background: url("./../images/stars.png") no-repeat;
-}
-
-@media (min-width: 576px) {
-    .grid__text-2::after {
-        top: 4px;
-        left: unset;
-    }
+.grid__text-2-wrap {
+    padding-left: 45px;
 }
 
 .grid__text-2-wrap::before {
@@ -884,6 +981,12 @@ ul {
 @media (min-width: 1280px) {
     .grid__text-2-wrap::after {
         width: 560px;
+    }
+}
+
+@media (min-width: 576px) {
+    .grid__rating {
+        display: inline-block;
     }
 }
 

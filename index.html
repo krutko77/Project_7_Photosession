@@ -5,9 +5,9 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet">
+      rel="stylesheet"> -->
    <link rel="stylesheet" href="assets/css/style.min.css">
    <title>Photosession</title>
 </head>
@@ -62,9 +62,52 @@
                   <li class="grid__list-item grid__list-item--4">Готовы ответить на любые вопросы</li>
                </ul>
                <div class="grid__text-2-wrap">
-                  <p class="grid__text-2 text"><span class="grid__text-2-stars">Более <strong>150</strong> отзывов с оценкой</span></p>
+                  <p class="grid__text-2 text"><span class="grid__text-2-stars">Более <strong>50</strong> отзывов с
+                        оценкой</span></p>
+                  <div class="grid__rating  rating">
+                     <div class="rating__group">
+                        <input class="rating__input rating__input--none" name="rating" id="rating-none" value="0"
+                           type="radio">
+                        <!-- <label aria-label="No rating" class="rating__label" for="rating-none"><i class="rating__icon rating__icon--none fa fa-ban"></i></label> -->
+                        <label aria-label="1 star" class="rating__label" for="rating-1"><i
+                              class="rating__icon rating__icon--star fa fa-star"></i></label>
+                        <input class="rating__input" name="rating" id="rating-1" value="1" type="radio">
+                        <label aria-label="2 stars" class="rating__label" for="rating-2"><i
+                              class="rating__icon rating__icon--star fa fa-star"></i></label>
+                        <input class="rating__input" name="rating" id="rating-2" value="2" type="radio">
+                        <label aria-label="3 stars" class="rating__label" for="rating-3"><i
+                              class="rating__icon rating__icon--star fa fa-star"></i></label>
+                        <input class="rating__input" name="rating" id="rating-3" value="3" type="radio" checked>
+                        <label aria-label="4 stars" class="rating__label" for="rating-4"><i
+                              class="rating__icon rating__icon--star fa fa-star"></i></label>
+                        <input class="rating__input" name="rating" id="rating-4" value="4" type="radio">
+                        <label aria-label="5 stars" class="rating__label" for="rating-5"><i
+                              class="rating__icon rating__icon--star fa fa-star"></i></label>
+                        <input class="rating__input" name="rating" id="rating-5" value="5" type="radio">
+                     </div>
+                     <!-- <p class="desc" style="margin-bottom: 2rem; font-family: sans-serif; font-size:0.9rem">Full stars<br/>'No rating' option</p> -->
+                  </div>
                </div>
             </div>
+         </div>
+      </div>
+   </section>
+   <section class="photos">
+      <div class="container">
+         <h2 class="photos__title">Фотографии пакета<span class="photos__title-colon">:</span></h2>
+         <div class="photos__wrap">
+            <img class="photos__item" src="./assets/images/photos-img-1.png" alt="photo">
+            <img class="photos__item" src="./assets/images/photos-img-2.png" alt="photo">
+            <img class="photos__item" src="./assets/images/photos-img-3.png" alt="photo">
+            <img class="photos__item" src="./assets/images/photos-img-4.png" alt="photo">
+            <img class="photos__item" src="./assets/images/photos-img-1.png" alt="photo">
+            <img class="photos__item" src="./assets/images/photos-img-2.png" alt="photo">
+            <img class="photos__item" src="./assets/images/photos-img-3.png" alt="photo">
+            <img class="photos__item" src="./assets/images/photos-img-4.png" alt="photo">
+            <img class="photos__item" src="./assets/images/photos-img-1.png" alt="photo">
+            <img class="photos__item" src="./assets/images/photos-img-2.png" alt="photo">
+            <img class="photos__item" src="./assets/images/photos-img-3.png" alt="photo">
+            <img class="photos__item" src="./assets/images/photos-img-4.png" alt="photo">
          </div>
       </div>
    </section>
