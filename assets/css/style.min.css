@@ -547,17 +547,16 @@ ul {
         color: white; } }
 
 .grid {
+  display: grid;
+  grid-template-columns: 1fr;
   padding-top: 40px; }
-  .grid__inner {
-    display: grid;
-    grid-template-columns: 1fr; }
-    @media (min-width: 768px) {
-      .grid__inner {
-        grid-template-columns: 670px;
-        justify-content: center; } }
-    @media (min-width: 1280px) {
-      .grid__inner {
-        grid-template-columns: 570px 570px; } }
+  @media (min-width: 768px) {
+    .grid {
+      grid-template-columns: 670px;
+      justify-content: center; } }
+  @media (min-width: 1280px) {
+    .grid {
+      grid-template-columns: 570px 570px; } }
   @media (min-width: 1280px) {
     .grid__item-1 {
       grid-column: 1 / 2;
@@ -773,7 +772,7 @@ ul {
         display: inline-block; } }
   .photos__wrap {
     display: grid;
-    grid-template-columns: repeat(12, 277px);
+    grid-template-columns: repeat(16, 277px);
     overflow: auto;
     grid-column-gap: 10px;
     margin-bottom: 40px; }
@@ -828,6 +827,19 @@ ul {
     background: url("./../images/Arrow.png") no-repeat; }
   .photos__checker:checked ~ .photos__limited-block {
     max-height: none; }
+
+.about__title {
+  font-size: 18px;
+  font-family: "Montserrat-500";
+  line-height: 22px;
+  color: #37373F;
+  margin: 0 auto; }
+
+.about__text {
+  font-size: 16px;
+  font-family: "Montserrat-400";
+  line-height: 24px;
+  color: #37373F; }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document

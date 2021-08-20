@@ -419,7 +419,6 @@ html,
 body {
     font-family: 'Montserrat', sans-serif;
     font-family: "FontAwesome";
-    min-width: 320px;
 }
 
 a {
@@ -715,16 +714,13 @@ ul {
 }
 
 .grid {
+    display: grid;
+    grid-template-columns: 1fr;
     padding-top: 40px;
 }
 
-.grid__inner {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
 @media (min-width: 768px) {
-    .grid__inner {
+    .grid {
         grid-template-columns: 670px;
         -ms-flex-pack: center;
         justify-content: center;
@@ -732,7 +728,7 @@ ul {
 }
 
 @media (min-width: 1280px) {
-    .grid__inner {
+    .grid {
         grid-template-columns: 570px 570px;
     }
 }
@@ -1008,6 +1004,18 @@ ul {
     }
 }
 
+@media (min-width: 1280px) {
+    .photos {
+        padding-top: 100px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .photos {
+        padding-top: 60px;
+    }
+}
+
 .photos__title {
     max-width: 250px;
     text-align: center;
@@ -1030,6 +1038,25 @@ ul {
     }
 }
 
+@media (min-width: 1280px) {
+    .photos__title {
+        font-size: 28px;
+        font-family: "Montserrat-500";
+        line-height: 40px;
+        color: #37373F;
+    }
+}
+
+@media (min-width: 1440px) {
+    .photos__title {
+        margin: 0 0 35px;
+        font-size: 20px;
+        font-family: "Montserrat-500";
+        line-height: 30px;
+        color: #37373F;
+    }
+}
+
 .photos__title-colon {
     display: none;
 }
@@ -1042,17 +1069,91 @@ ul {
 
 .photos__wrap {
     display: grid;
-    grid-template-columns: repeat(12, 280px);
+    grid-template-columns: repeat(12, 277px);
     overflow: auto;
-    margin: 0 auto;
+    grid-column-gap: 10px;
+    margin-bottom: 40px;
 }
 
 @media (min-width: 768px) {
     .photos__wrap {
-        grid-template-columns: repeat(2, 280px);
+        grid-template-columns: repeat(2, 277px);
         -ms-flex-pack: center;
         justify-content: center;
+        grid-row-gap: 10px;
     }
+}
+
+@media (min-width: 1280px) {
+    .photos__wrap {
+        grid-template-columns: repeat(4, 277px);
+    }
+}
+
+@media (min-width: 768px) {
+    .photos__limited-block {
+        max-height: 770px;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 1280px) {
+    .photos__limited-block {
+        max-height: 380px;
+        overflow: hidden;
+    }
+}
+
+.photos__label-wrap {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.photos__checker {
+    display: none;
+}
+
+.photos__button {
+    display: none;
+    position: relative;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "Montserrat-500";
+    line-height: 25px;
+    color: #5286EC;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .photos__button {
+        display: inline-block;
+    }
+}
+
+.photos__button::before {
+    content: '';
+    width: 11px;
+    height: 6px;
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    background: url("./../images/Arrow.png") no-repeat;
+}
+
+.photos__button::after {
+    content: '';
+    width: 11px;
+    height: 6px;
+    position: absolute;
+    top: 10px;
+    right: -20px;
+    background: url("./../images/Arrow.png") no-repeat;
+}
+
+.photos__checker:checked ~ .photos__limited-block {
+    max-height: none;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
