@@ -346,26 +346,26 @@ template {
     display: none;
 }
 
-.header .container, .main .container, .grid .container, .photos .container {
+.header .container, .main .container, .grid .container, .photos .container, .about .container {
     max-width: 1280px;
     padding: 0 15px;
     margin: 0 auto;
 }
 
 @media screen and (min-width: 576px) {
-    .header .container, .main .container, .grid .container, .photos .container {
+    .header .container, .main .container, .grid .container, .photos .container, .about .container {
         padding: 0 35px;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .header .container, .main .container, .grid .container, .photos .container {
+    .header .container, .main .container, .grid .container, .photos .container, .about .container {
         padding: 0 50px;
     }
 }
 
 @media screen and (min-width: 1280px) {
-    .header .container, .main .container, .grid .container, .photos .container {
+    .header .container, .main .container, .grid .container, .photos .container, .about .container {
         padding: 0 70px;
     }
 }
@@ -714,13 +714,16 @@ ul {
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: 1fr;
     padding-top: 40px;
 }
 
+.grid__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
 @media (min-width: 768px) {
-    .grid {
+    .grid__inner {
         grid-template-columns: 670px;
         -ms-flex-pack: center;
         justify-content: center;
@@ -728,7 +731,7 @@ ul {
 }
 
 @media (min-width: 1280px) {
-    .grid {
+    .grid__inner {
         grid-template-columns: 570px 570px;
     }
 }
@@ -1069,10 +1072,10 @@ ul {
 
 .photos__wrap {
     display: grid;
-    grid-template-columns: repeat(12, 277px);
+    grid-template-columns: repeat(16, 277px);
     overflow: auto;
     grid-column-gap: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 }
 
 @media (min-width: 768px) {
@@ -1130,16 +1133,16 @@ ul {
     .photos__button {
         display: inline-block;
     }
-}
 
-.photos__button::before {
-    content: '';
-    width: 11px;
-    height: 6px;
-    position: absolute;
-    top: 10px;
-    left: -20px;
-    background: url("./../images/Arrow.png") no-repeat;
+    .photos__button::before {
+        content: '';
+        width: 11px;
+        height: 6px;
+        position: absolute;
+        top: 10px;
+        left: -20px;
+        background: url("./../images/Arrow.png") no-repeat;
+    }
 }
 
 .photos__button::after {
@@ -1153,6 +1156,129 @@ ul {
 }
 
 .photos__checker:checked ~ .photos__limited-block {
+    max-height: none;
+}
+
+.about__img-wrap {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.about__img-wrap::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 0;
+    width: 31px;
+    height: 27px;
+    background: url("./../images/about-heart.png") no-repeat;
+}
+
+.about__title {
+    font-size: 18px;
+    font-family: "Montserrat-500";
+    line-height: 22px;
+    color: #37373F;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.about__subtitle {
+    font-size: 18px;
+    font-family: "Montserrat-500";
+    line-height: 26px;
+    color: #37373F;
+    margin-bottom: 10px;
+}
+
+.about__text-center {
+    text-align: center;
+    font-size: 14px;
+    font-family: "Montserrat-400";
+    line-height: 21px;
+    color: #37373F;
+    margin-bottom: 10px;
+}
+
+.about__text {
+    font-size: 16px;
+    font-family: "Montserrat-400";
+    line-height: 24px;
+    color: #37373F;
+}
+
+.about__limited-block-1 {
+    max-height: 25px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.about__label-wrap-1 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.about__checker-1 {
+    display: none;
+}
+
+.about__button-1 {
+    max-width: 200px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "Montserrat-500";
+    line-height: 21px;
+    color: #5286EC;
+    cursor: pointer;
+}
+
+.about__checker-1:checked ~ .about__limited-block-1 {
+    max-height: none;
+}
+
+.about__text-2 {
+    margin-bottom: 20px;
+}
+
+.about__limited-block-2 {
+    max-height: 455px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.about__checker-2 {
+    display: none;
+}
+
+.about__button-2 {
+    position: relative;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Montserrat-500";
+    line-height: 23px;
+    color: #5286EC;
+    cursor: pointer;
+}
+
+.about__button-2::before {
+    content: '';
+    width: 11px;
+    height: 6px;
+    position: absolute;
+    top: 10px;
+    right: -20px;
+    background: url("./../images/Arrow.png") no-repeat;
+}
+
+.about__checker-2:checked ~ .about__limited-block-2 {
     max-height: none;
 }
 

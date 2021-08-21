@@ -310,18 +310,18 @@ template {
 [hidden] {
   display: none; }
 
-.header .container, .main .container, .grid .container, .photos .container {
+.header .container, .main .container, .grid .container, .photos .container, .about .container {
   max-width: 1280px;
   padding: 0 15px;
   margin: 0 auto; }
   @media screen and (min-width: 576px) {
-    .header .container, .main .container, .grid .container, .photos .container {
+    .header .container, .main .container, .grid .container, .photos .container, .about .container {
       padding: 0 35px; } }
   @media screen and (min-width: 768px) {
-    .header .container, .main .container, .grid .container, .photos .container {
+    .header .container, .main .container, .grid .container, .photos .container, .about .container {
       padding: 0 50px; } }
   @media screen and (min-width: 1280px) {
-    .header .container, .main .container, .grid .container, .photos .container {
+    .header .container, .main .container, .grid .container, .photos .container, .about .container {
       padding: 0 70px; } }
 
 @font-face {
@@ -547,16 +547,17 @@ ul {
         color: white; } }
 
 .grid {
-  display: grid;
-  grid-template-columns: 1fr;
   padding-top: 40px; }
-  @media (min-width: 768px) {
-    .grid {
-      grid-template-columns: 670px;
-      justify-content: center; } }
-  @media (min-width: 1280px) {
-    .grid {
-      grid-template-columns: 570px 570px; } }
+  .grid__inner {
+    display: grid;
+    grid-template-columns: 1fr; }
+    @media (min-width: 768px) {
+      .grid__inner {
+        grid-template-columns: 670px;
+        justify-content: center; } }
+    @media (min-width: 1280px) {
+      .grid__inner {
+        grid-template-columns: 570px 570px; } }
   @media (min-width: 1280px) {
     .grid__item-1 {
       grid-column: 1 / 2;
@@ -775,7 +776,7 @@ ul {
     grid-template-columns: repeat(16, 277px);
     overflow: auto;
     grid-column-gap: 10px;
-    margin-bottom: 40px; }
+    margin-bottom: 45px; }
     @media (min-width: 768px) {
       .photos__wrap {
         grid-template-columns: repeat(2, 277px);
@@ -808,15 +809,15 @@ ul {
     cursor: pointer; }
     @media (min-width: 768px) {
       .photos__button {
-        display: inline-block; } }
-  .photos__button::before {
-    content: '';
-    width: 11px;
-    height: 6px;
-    position: absolute;
-    top: 10px;
-    left: -20px;
-    background: url("./../images/Arrow.png") no-repeat; }
+        display: inline-block; }
+        .photos__button::before {
+          content: '';
+          width: 11px;
+          height: 6px;
+          position: absolute;
+          top: 10px;
+          left: -20px;
+          background: url("./../images/Arrow.png") no-repeat; } }
   .photos__button::after {
     content: '';
     width: 11px;
@@ -828,18 +829,144 @@ ul {
   .photos__checker:checked ~ .photos__limited-block {
     max-height: none; }
 
+@media (min-width: 768px) {
+  .about {
+    padding-top: 75px; } }
+
+.about__img-wrap {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 25px; }
+  .about__img-wrap::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 0;
+    width: 31px;
+    height: 27px;
+    background: url("./../images/about-heart.png") no-repeat; }
+    @media (min-width: 576px) {
+      .about__img-wrap::after {
+        right: 105px; } }
+    @media (min-width: 768px) {
+      .about__img-wrap::after {
+        right: 185px; } }
+
 .about__title {
   font-size: 18px;
   font-family: "Montserrat-500";
   line-height: 22px;
   color: #37373F;
-  margin: 0 auto; }
+  text-align: center;
+  margin-bottom: 5px; }
+
+.about__subtitle {
+  font-size: 18px;
+  font-family: "Montserrat-500";
+  line-height: 26px;
+  color: #37373F;
+  margin-bottom: 10px; }
+
+.about__text-center {
+  text-align: center;
+  font-size: 14px;
+  font-family: "Montserrat-400";
+  line-height: 21px;
+  color: #37373F;
+  margin-bottom: 10px; }
 
 .about__text {
   font-size: 16px;
   font-family: "Montserrat-400";
   line-height: 24px;
-  color: #37373F; }
+  color: #37373F;
+  max-width: 590px; }
+
+.about__limited-block-1 {
+  max-height: 25px;
+  overflow: hidden;
+  margin-bottom: 5px; }
+
+.about__checker-1, .about__checker-2, .about__checker-3 {
+  display: none; }
+
+.about__label-wrap-1 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; }
+  @media (min-width: 576px) {
+    .about__label-wrap-1 {
+      margin-bottom: 27px; } }
+
+.about__button-1 {
+  max-width: 200px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Montserrat-500";
+  line-height: 21px;
+  color: #5286EC;
+  cursor: pointer; }
+
+.about__checker-1:checked ~ .about__limited-block-1,
+.about__checker-2:checked ~ .about__limited-block-2,
+.about__checker-3:checked ~ .about__limited-block-3 {
+  max-height: none; }
+
+.about__text-2 {
+  margin-bottom: 27px; }
+
+.about__limited-block-2 {
+  max-height: 495px;
+  overflow: hidden;
+  margin-bottom: 17px; }
+  @media (min-width: 576px) {
+    .about__limited-block-2 {
+      max-height: 325px; } }
+  @media (min-width: 768px) {
+    .about__limited-block-2 {
+      max-height: 275px; } }
+
+.about__label-wrap-2 {
+  margin-bottom: 27px; }
+  @media (min-width: 576px) {
+    .about__label-wrap-2 {
+      margin-bottom: 37px; } }
+  @media (min-width: 768px) {
+    .about__label-wrap-2 {
+      margin-bottom: 30px; } }
+
+.about__button-2, .about__button-3 {
+  position: relative;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "Montserrat-500";
+  line-height: 23px;
+  color: #5286EC;
+  cursor: pointer; }
+  .about__button-2::before, .about__button-3::before {
+    content: '';
+    width: 11px;
+    height: 6px;
+    position: absolute;
+    top: 8px;
+    right: -20px;
+    background: url("./../images/Arrow.png") no-repeat; }
+
+.about__limited-block-3 {
+  max-height: 150px;
+  overflow: hidden;
+  margin-bottom: 17px; }
+  @media (min-width: 576px) {
+    .about__limited-block-3 {
+      max-height: 180px; } }
+  @media (min-width: 768px) {
+    .about__limited-block-3 {
+      max-height: 150px; } }
+
+.about__label-wrap-3 {
+  margin-bottom: 27px; }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
