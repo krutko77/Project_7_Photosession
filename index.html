@@ -122,7 +122,7 @@
    <section class="about">
       <div class="container">
          <div class="about__wrap">
-            <div class="about__inner-1">
+            <div class="about__block-1">
                <div class="about__img-wrap">
                   <img class="about__img" src="./assets/images/about-img.png" alt="#">
                </div>
@@ -140,7 +140,7 @@
                   <label class="about__button-1" for="about__checker-1">Показать больше информации о фотографе</label>
                </div>
             </div>
-            <div class="about__inner-2">
+            <div class="about__block-2">
                <input class="about__checker-2" type="checkbox" id="about__checker-2">
                <div class="about__limited-block-2">
                   <h3 class="about__subtitle">Об организаторе:</h3>
@@ -193,6 +193,61 @@
                </div>
                <div class="about__label-wrap-3">
                   <label class="about__button-3" for="about__checker-3">Читать еще</label>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="timetable">
+      <div class="container">
+         <div class="timetable__inner">
+            <h2 class="timetable__title">Доступная съемка в ближайшее время</h2>
+            <div class="timetable__row-1">
+               <h3 class="timetable__subtitle">Пятница, 14 сентября</h3>
+            </div>
+            <div class="timetable__row-2">
+               <ul class="timetable__list">
+                  <li class="timetable__item">15:00 - 18:00</li>
+                  <li class="timetable__item">1500₽</li>
+                  <li class="timetable__item">Осталось — 1 место</li>
+               </ul>
+               <button class="timetable__btn">Выбрать</button>
+            </div>
+            <div class="timetable__row-3">
+               <ul class="timetable__list">
+                  <li class="timetable__item">19:00 - 22:00</li>
+                  <li class="timetable__item">1500₽</li>
+                  <li class="timetable__item">Осталось — 1 место</li>
+               </ul>
+               <button class="timetable__btn">Выбрать</button>
+            </div>
+            <div class="timetable__row-4">
+               <div class="timetable__text-2-wrap grid__text-2-wrap">
+                  <p class="timetable__text-2 grid__text-2 text"><span class="grid__text-2-stars">Более <strong>50</strong> отзывов с
+                        оценкой</span></p>
+                  <div class="timetable__rating  rating">
+                     <div class="rating__group">
+                        <input class="rating__input rating__input--none" name="rating" id="rating-none" value="0"
+                           type="radio">
+                        <!-- <label aria-label="No rating" class="rating__label" for="rating-none"><i class="rating__icon rating__icon--none fa fa-ban"></i></label> -->
+                        <label aria-label="1 star" class="rating__label" for="rating-1"><i
+                              class="rating__icon rating__icon--star fa fa-star"></i></label>
+                        <input class="rating__input" name="rating" id="rating-1" value="1" type="radio">
+                        <label aria-label="2 stars" class="rating__label" for="rating-2"><i
+                              class="rating__icon rating__icon--star fa fa-star"></i></label>
+                        <input class="rating__input" name="rating" id="rating-2" value="2" type="radio">
+                        <label aria-label="3 stars" class="rating__label" for="rating-3"><i
+                              class="rating__icon rating__icon--star fa fa-star"></i></label>
+                        <input class="rating__input" name="rating" id="rating-3" value="3" type="radio" checked>
+                        <label aria-label="4 stars" class="rating__label" for="rating-4"><i
+                              class="rating__icon rating__icon--star fa fa-star"></i></label>
+                        <input class="rating__input" name="rating" id="rating-4" value="4" type="radio">
+                        <label aria-label="5 stars" class="rating__label" for="rating-5"><i
+                              class="rating__icon rating__icon--star fa fa-star"></i></label>
+                        <input class="rating__input" name="rating" id="rating-5" value="5" type="radio">
+                     </div>
+                     <!-- <p class="desc" style="margin-bottom: 2rem; font-family: sans-serif; font-size:0.9rem">Full stars<br/>'No rating' option</p> -->
+                  </div>
                </div>
             </div>
          </div>

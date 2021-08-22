@@ -481,7 +481,7 @@ ul {
 
 .header__city-link {
     font-size: 14px;
-    font-family: 400;
+    font-family: "Montserrat-400";
     line-height: 17px;
     color: #5286EC;
 }
@@ -498,7 +498,7 @@ ul {
 
 .header__phone span {
     font-size: 14px;
-    font-family: 400;
+    font-family: "Montserrat-400";
     line-height: 17px;
     color: #B3B3B3;
 }
@@ -511,7 +511,7 @@ ul {
 
 .header__phone-link {
     font-size: 14px;
-    font-family: 400;
+    font-family: "Montserrat-400";
     line-height: 17px;
     color: #37373F;
 }
@@ -1159,9 +1159,33 @@ ul {
     max-height: none;
 }
 
+.about__wrap {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
 @media (min-width: 768px) {
-    .about {
+    .about__wrap {
         padding-top: 75px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .about__wrap {
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding-top: 57px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .about__inner-1 {
+        padding: 30px 60px 0 0;
+        max-width: 460px;
     }
 }
 
@@ -1193,6 +1217,12 @@ ul {
 @media (min-width: 768px) {
     .about__img-wrap::after {
         right: 185px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .about__img-wrap::after {
+        right: 50px;
     }
 }
 
