@@ -1381,6 +1381,24 @@ ul {
     padding-top: 40px;
 }
 
+@media (min-width: 576px) {
+    .timetable__inner {
+        padding-top: 70px;
+    }
+}
+
+@media (min-width: 768px) {
+    .timetable__inner {
+        padding-top: 95px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .timetable__inner {
+        max-width: 770px;
+    }
+}
+
 .timetable__title {
     text-align: center;
     margin-bottom: 35px;
@@ -1390,11 +1408,20 @@ ul {
     color: #37373F;
 }
 
+@media (min-width: 576px) {
+    .timetable__title {
+        font-size: 26px;
+        font-family: "Montserrat-400";
+        line-height: 38px;
+        color: #37373F;
+        margin-bottom: 45px;
+    }
+}
+
 @media (min-width: 768px) {
     .timetable__title {
-        max-width: 350px;
         text-align: left;
-        margin: 0 0 35px;
+        margin-bottom: 25px;
         font-size: 20px;
         font-family: "Montserrat-500";
         line-height: 30px;
@@ -1406,14 +1433,13 @@ ul {
     .timetable__title {
         font-size: 28px;
         font-family: "Montserrat-500";
-        line-height: 40px;
+        line-height: 41px;
         color: #37373F;
     }
 }
 
 @media (min-width: 1440px) {
     .timetable__title {
-        margin: 0 0 35px;
         font-size: 20px;
         font-family: "Montserrat-500";
         line-height: 30px;
@@ -1421,12 +1447,51 @@ ul {
     }
 }
 
-.timetable__subtitle {
+.timetable__title-colon {
+    display: none;
+}
+
+@media (min-width: 576px) {
+    .timetable__title-colon {
+        display: inline;
+    }
+}
+
+.timetable__text-1 {
     text-align: center;
     font-size: 18px;
     font-family: "Montserrat-400";
     line-height: 26px;
     color: #37373F;
+}
+
+@media (min-width: 576px) {
+    .timetable__text-1 {
+        text-align: left;
+    }
+}
+
+.timetable__calendar {
+    position: relative;
+}
+
+.timetable__calendar::after {
+    content: '';
+    width: 35px;
+    height: 35px;
+    border-radius: 3px;
+    border: 0.5px solid #C4C4C4;
+    position: absolute;
+    top: -6px;
+    right: -53px;
+    background: url("./../images/calendar.png") center no-repeat;
+    display: none;
+}
+
+@media (min-width: 576px) {
+    .timetable__calendar::after {
+        display: inline-block;
+    }
 }
 
 .timetable__list {
@@ -1435,6 +1500,12 @@ ul {
     line-height: 33px;
     color: #37373F;
     margin-bottom: 18px;
+}
+
+@media (min-width: 576px) {
+    .timetable__list {
+        margin-bottom: 0;
+    }
 }
 
 .timetable__btn {
@@ -1449,6 +1520,16 @@ ul {
     cursor: pointer;
 }
 
+.timetable__btn:hover {
+    color: #727272;
+}
+
+@media (min-width: 576px) {
+    .timetable__btn {
+        margin-top: 25px;
+    }
+}
+
 .timetable__row-1, .timetable__row-2, .timetable__row-3, .timetable__row-4 {
     border-color: #C7C7C7;
     border-style: solid;
@@ -1456,17 +1537,115 @@ ul {
 
 .timetable__row-1 {
     padding: 20px 0;
-    border-width: 1px 1px 0.5px;
+    border-width: 1px 1px 0;
+}
+
+@media (min-width: 576px) {
+    .timetable__row-1 {
+        padding: 25px 0 20px 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .timetable__row-1 {
+        padding-left: 30px;
+    }
 }
 
 .timetable__row-2, .timetable__row-3 {
     padding: 20px 0 32px 20px;
-    border-width: 0 1px 0.5px;
+    border-width: 0.5px 1px 0;
+}
+
+@media (min-width: 576px) {
+    .timetable__row-2, .timetable__row-3 {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 15px 17px 15px 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .timetable__row-2, .timetable__row-3 {
+        padding: 15px 30px;
+    }
 }
 
 .timetable__row-4 {
-    padding: 25px 0 10px 20px;
-    border-width: 0 1px 1px;
+    padding: 25px 0 50px 67px;
+    border-width: 0.5px 1px 1px;
+}
+
+@media (min-width: 576px) {
+    .timetable__row-4 {
+        padding: 50px 0 45px 60px;
+        border-width: 0 1px 1px;
+    }
+}
+
+@media (min-width: 768px) {
+    .timetable__row-4 {
+        padding-left: 70px;
+    }
+}
+
+.timetable__text-4 {
+    margin-right: 10px;
+    position: relative;
+    font-size: 13px;
+    font-family: "Montserrat-400";
+    line-height: 19px;
+    color: #37373F;
+}
+
+@media (min-width: 576px) {
+    .timetable__text-4 {
+        display: inline-block;
+        font-size: 18px;
+        font-family: "Montserrat-400";
+        line-height: 26px;
+        color: #37373F;
+    }
+}
+
+.timetable__text-4::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -47px;
+    width: 38px;
+    height: 42px;
+    background: url("./../images/grid-img-5.png") no-repeat;
+}
+
+@media (min-width: 576px) {
+    .timetable__text-4::before {
+        top: -15px;
+    }
+}
+
+.timetable__text-4-stars::after {
+    content: "";
+    position: absolute;
+    top: 26px;
+    left: 0px;
+    width: 120px;
+    height: 20px;
+    background: url("./../images/stars.png") no-repeat;
+}
+
+@media (min-width: 576px) {
+    .timetable__text-4-stars::after {
+        top: 3px;
+        left: unset;
+        right: -135px;
+    }
+}
+
+.map {
+    height: 510px;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
