@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1211,19 +1212,16 @@ ul {
     position: absolute;
     top: -2px;
     left: 30px; }
+  .map__item-4-wrap {
+    padding-left: 30px;
+    display: flex;
+    justify-content: center; }
+  .map__img {
+    width: 67px;
+    height: 67px;
+    margin: 5px 10px 0 0; }
   .map__checker {
     display: none; }
-  .map__info-photographer {
-    padding-left: 110px;
-    position: relative; }
-    .map__info-photographer::before {
-      content: '';
-      width: 67px;
-      height: 67px;
-      background: url("./../images/map-img-4.png") center no-repeat;
-      position: absolute;
-      top: 8px;
-      left: 30px; }
   .map__limited-block {
     max-height: 50px;
     overflow: hidden;
@@ -1241,6 +1239,134 @@ ul {
     max-height: none;
     padding: 10px;
     border: .5px solid #C7C7C7; }
+
+.slider {
+  padding: 50px 0; }
+  @media (min-width: 1280px) {
+    .slider {
+      display: none; } }
+  .slider__inner {
+    width: 275px;
+    border: 1px solid #C7C7C7;
+    margin: 0 auto; }
+    @media (min-width: 576px) {
+      .slider__inner {
+        width: 400px; } }
+  .slider__items {
+    width: 275px;
+    margin: 0 auto 40px; }
+  .slider__wrap {
+    padding: 0 0 10px 25px;
+    display: flex;
+    width: 275px;
+    margin: 0 auto; }
+  .slider__item-1, .slider__item-2, .slider__item-3 {
+    padding: 135px 0 0;
+    height: 195px;
+    position: relative;
+    text-align: center; }
+  .slider__item-1::before {
+    content: '';
+    width: 66px;
+    height: 66px;
+    border-radius: 33px;
+    background: #FC9B09 url("./../images/map-img-1.png") center no-repeat;
+    position: absolute;
+    top: 50px;
+    left: 105px; }
+  .slider__item-2::before {
+    content: '';
+    width: 66px;
+    height: 66px;
+    border-radius: 33px;
+    background: #FC9B09 url("./../images/map-img-2.png") center no-repeat;
+    position: absolute;
+    top: 50px;
+    left: 105px; }
+  .slider__item-3::before {
+    content: '';
+    width: 66px;
+    height: 66px;
+    border-radius: 33px;
+    background: #FC9B09 url("./../images/map-img-3.png") center no-repeat;
+    position: absolute;
+    top: 50px;
+    left: 105px; }
+  .slider__checker {
+    display: none; }
+  .slider__text-1 {
+    font-size: 16px;
+    font-family: "Montserrat-500";
+    line-height: 23px;
+    color: #37373F;
+    margin-bottom: 5px; }
+  .slider__text-2 {
+    font-size: 14px;
+    font-family: "Montserrat-400";
+    line-height: 20px;
+    color: #37373F; }
+  .slider__img {
+    width: 67px;
+    height: 67px;
+    margin-right: 10px; }
+  .slider__limited-block {
+    margin: 0; }
+  .slider__checker:checked ~ .slider__limited-block {
+    max-height: none;
+    padding: 10px;
+    border: .5px solid #C7C7C7; }
+
+/* Стилизация слайдера */
+.slick-track {
+  display: flex; }
+
+.slick-list {
+  overflow: hidden; }
+
+.slider__items {
+  position: relative;
+  padding: 0px; }
+
+.slider__items .slick-arrow {
+  position: absolute;
+  top: 50%;
+  margin: -30px 0 0 0;
+  z-index: 2;
+  font-size: 0;
+  width: 20px;
+  height: 40px;
+  border: none;
+  cursor: pointer; }
+
+.slider__items .slick-arrow.slick-prev {
+  left: 25px;
+  background: url("./../images/slider-arrow-prew.png") 0 0 no-repeat; }
+
+.slider__items .slick-arrow.slick-next {
+  right: 15px;
+  background: url("./../images/slider-arrow-next.png") 0 0 no-repeat; }
+
+.slider__items .slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.slider__items .slick-dots li {
+  list-style: none;
+  margin: 0 5px; }
+
+.slider__items .slick-dots li.slick-active button {
+  background-color: #FC9B09;
+  border: none; }
+
+.slider__items .slick-dots button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  border: .5px solid #B3B3B3;
+  cursor: pointer; }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document

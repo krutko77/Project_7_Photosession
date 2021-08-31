@@ -5,9 +5,8 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
-   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet"> -->
+   <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css">
+   <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"> -->
    <link rel="stylesheet" href="assets/css/style.min.css">
    <title>Photosession</title>
 </head>
@@ -204,7 +203,8 @@
             <h2 class="timetable__title">Доступная съемка </br> в ближайшее время<span
                   class="timetable__title-colon">:</span></h2>
             <div class="timetable__row-1">
-               <p class="timetable__text-1">Пятница, <strong>14</strong> <span class="timetable__calendar">сентября</span></p>
+               <p class="timetable__text-1">Пятница, <strong>14</strong> <span
+                     class="timetable__calendar">сентября</span></p>
             </div>
             <div class="timetable__row-2">
                <ul class="timetable__list">
@@ -231,7 +231,9 @@
    </section>
    <section class="map">
       <div class="map__inner">
-         <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A785a0cd5e73ceb18e06ead6034fa9e8d10a0bc18a8a73ca9a5faea9595430b7a&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+         <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A785a0cd5e73ceb18e06ead6034fa9e8d10a0bc18a8a73ca9a5faea9595430b7a&amp;source=constructor"
+            width="100%" height="100%" frameborder="0"></iframe>
          <div class="map__left-block">
             <ul class="map__list">
                <li class="map__item-1">
@@ -247,25 +249,65 @@
                   <p class="map__text-2">2 места</p>
                </li>
             </ul>
-            <div class="map__info-photographer">
-               <input class="map__checker" type="checkbox" id="map__checker">
-               <div class="map__limited-block">
-                  <p class="map__text-1">Мария Иванова</p>
-                  <p class="map__text-3">Фотограф</p>
-                  <p class="map__text-3">Всем привет! Я фотограф Мария! И помимо фотосъемки я так же являюсь членом
+            <div class="map__item-4-wrap">
+               <img class="map__img" src="./assets/images/map-img-4.png" alt="photo">
+               <div class="map__info-photographer">
+                  <input class="map__checker" type="checkbox" id="map__checker">
+                  <div class="map__limited-block">
+                     <p class="map__text-1">Мария Иванова</p>
+                     <p class="map__text-3">Фотограф</p>
+                     <p class="map__text-3">Всем привет! Я фотограф Мария! И помимо фотосъемки я так же являюсь членом
+                        группы
+                        экспертов туристической отрасли, которые хорошо разбираются в маркетинге, операциях и услугах
+                        обслуживания
+                        клиентов, специализирующихся на совместном использовании и частных турах.</p>
+                  </div>
+                  <label class="map__button" for="map__checker">Показать больше информации</label>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="slider">
+      <div class="slider__inner">
+         <div class="slider__items">
+            <div class="slider__item-1">
+               <p class="slider__text-1">Где встречаемся?</p>
+               <p class="slider__text-2">Москва</p>
+            </div>
+            <div class="slider__item-2">
+               <p class="slider__text-1">Время съемки</p>
+               <p class="slider__text-2">3 часа</p>
+            </div>
+            <div class="slider__item-3">
+               <p class="slider__text-1">Мест осталось:</p>
+               <p class="slider__text-2">2 места</p>
+            </div>
+         </div>
+         <div class="slider__wrap">
+            <img class="slider__img" src="./assets/images/map-img-4.png" alt="photo">
+            <div class="slider__info-photographer map__info-photographer">
+               <input class="slider__checker" type="checkbox" id="slider__checker">
+               <div class="slider__limited-block map__limited-block">
+                  <p class="slider__text-1">Мария Иванова</p>
+                  <p class="slider__text-2">Фотограф</p>
+                  <p class="slider__text-2">Всем привет! Я фотограф Мария! И помимо фотосъемки я так же
+                     являюсь членом
                      группы
                      экспертов туристической отрасли, которые хорошо разбираются в маркетинге, операциях и услугах
                      обслуживания
                      клиентов, специализирующихся на совместном использовании и частных турах.</p>
                </div>
-               <label class="map__button" for="map__checker">Показать больше информации</label>
-            </div>            
+               <label class="slider__button map__button" for="slider__checker">Показать больше информации <br>о
+                  фотографе</label>
+            </div>
          </div>
-      </div>      
+      </div>
    </section>
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   <script src="assets/js/slick.min.js"></script>
-   <script src="assets/js/script.js"></script>
+   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+   <!-- <script type="text/javascript" src="assets/js/slick.min.js"></script> -->
+   <script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 
 </html>
