@@ -1940,6 +1940,12 @@ ul {
     padding-top: 40px;
 }
 
+@media (min-width: 1280px) {
+    .reviews__inner {
+        padding-top: 125px;
+    }
+}
+
 .reviews__title {
     text-align: center;
     margin-bottom: 15px;
@@ -1952,6 +1958,26 @@ ul {
 @media (min-width: 768px) {
     .reviews__title {
         text-align: left;
+        font-size: 20px;
+        font-family: "Montserrat-500";
+        line-height: 30px;
+        color: #37373F;
+    }
+}
+
+@media (min-width: 1280px) {
+    .reviews__title {
+        margin-bottom: 10px;
+        font-size: 28px;
+        font-family: "Montserrat-500";
+        line-height: 40px;
+        color: #37373F;
+    }
+}
+
+@media (min-width: 1440px) {
+    .reviews__title {
+        margin-bottom: 20px;
         font-size: 20px;
         font-family: "Montserrat-500";
         line-height: 30px;
@@ -2102,6 +2128,12 @@ ul {
     }
 }
 
+@media (min-width: 1280px) {
+    .reviews__paragraph {
+        max-width: 510px;
+    }
+}
+
 @media (min-width: 768px) {
     .reviews__date {
         margin-left: 120px;
@@ -2194,6 +2226,7 @@ ul {
 
 .reviews__checker:checked ~ .reviews__limited-block {
     max-height: none;
+    margin-bottom: 15px;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
