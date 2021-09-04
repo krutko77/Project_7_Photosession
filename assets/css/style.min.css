@@ -1380,6 +1380,9 @@ ul {
 
 .reviews__inner {
   padding-top: 40px; }
+  @media (min-width: 1280px) {
+    .reviews__inner {
+      padding-top: 125px; } }
 
 .reviews__title {
   text-align: center;
@@ -1388,18 +1391,41 @@ ul {
   font-family: "Montserrat-400";
   line-height: 39px;
   color: #37373F; }
+  @media (min-width: 768px) {
+    .reviews__title {
+      text-align: left;
+      font-size: 20px;
+      font-family: "Montserrat-500";
+      line-height: 30px;
+      color: #37373F; } }
+  @media (min-width: 1280px) {
+    .reviews__title {
+      margin-bottom: 10px;
+      font-size: 28px;
+      font-family: "Montserrat-500";
+      line-height: 40px;
+      color: #37373F; } }
+  @media (min-width: 1440px) {
+    .reviews__title {
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-family: "Montserrat-500";
+      line-height: 30px;
+      color: #37373F; } }
 
 .reviews__title-colon {
   display: none; }
   @media (min-width: 768px) {
     .reviews__title-colon {
-      display: inline-block;
-      text-align: left; } }
+      display: inline-block; } }
 
 .reviews__item {
   padding: 30px 0 35px;
   border: solid #C7C7C7;
   border-width: 0 0 .5px; }
+  @media (min-width: 768px) {
+    .reviews__item {
+      padding-bottom: 30px; } }
 
 .reviews__wrap-1, .reviews__wrap-2 {
   display: flex; }
@@ -1407,9 +1433,15 @@ ul {
 .reviews__wrap-1 {
   flex-direction: column;
   margin-bottom: 16px; }
+  @media (min-width: 768px) {
+    .reviews__wrap-1 {
+      flex-direction: row; } }
 
 .reviews__wrap-2 {
   margin-bottom: 20px; }
+  @media (min-width: 768px) {
+    .reviews__wrap-2 {
+      margin: 0; } }
 
 .reviews__img {
   width: 85px;
@@ -1423,6 +1455,10 @@ ul {
 .reviews__block-name {
   position: relative;
   margin-top: 5px; }
+  @media (min-width: 768px) {
+    .reviews__block-name {
+      margin-top: 10px;
+      width: 180px; } }
   .reviews__block-name::after {
     bottom: 8px;
     left: 0;
@@ -1436,8 +1472,15 @@ ul {
   font-family: "Montserrat-500";
   line-height: 20px;
   color: #37373F; }
+  @media (min-width: 768px) {
+    .reviews__text-1 {
+      margin-bottom: 7px;
+      font-size: 18px;
+      font-family: "Montserrat-500";
+      line-height: 22px;
+      color: #37373F; } }
 
-.reviews__text-2 {
+.reviews__text-2, .reviews__text-4 {
   font-size: 14px;
   font-family: "Montserrat-400";
   line-height: 21px;
@@ -1448,19 +1491,49 @@ ul {
   font-family: "Montserrat-400";
   line-height: 21px;
   color: #B3B3B3; }
+  @media (min-width: 768px) {
+    .reviews__text-3 {
+      font-size: 16px;
+      font-family: "Montserrat-400";
+      line-height: 24px;
+      color: #B3B3B3; } }
+
+@media (min-width: 768px) {
+  .reviews__text-4 {
+    font-size: 16px;
+    font-family: "Montserrat-400";
+    line-height: 24px;
+    color: #37373F; } }
 
 .reviews__paragraph {
   margin-bottom: 20px; }
+  @media (min-width: 768px) {
+    .reviews__paragraph {
+      margin: 0 0 10px 120px; } }
+  @media (min-width: 1280px) {
+    .reviews__paragraph {
+      max-width: 510px; } }
+
+@media (min-width: 768px) {
+  .reviews__date {
+    margin-left: 120px; } }
 
 .reviews__vector {
   position: relative;
   padding-left: 20px; }
+  @media (min-width: 768px) {
+    .reviews__vector {
+      align-self: flex-end;
+      padding-left: 10px; } }
   .reviews__vector::before {
     top: 5px;
     left: 0;
     width: 15px;
     height: 12px;
     background: url("./../images/reviews-img-vector.png") center no-repeat; }
+    @media (min-width: 768px) {
+      .reviews__vector::before {
+        left: -10px; } }
 
 .reviews__checker {
   display: none; }
@@ -1470,6 +1543,12 @@ ul {
   overflow: hidden;
   margin-bottom: 5px;
   z-index: 3; }
+  @media (min-width: 576px) {
+    .reviews__limited-block {
+      max-height: 1040px; } }
+  @media (min-width: 768px) {
+    .reviews__limited-block {
+      max-height: 1020px; } }
 
 .reviews__wrap-label {
   display: flex;
@@ -1498,7 +1577,8 @@ ul {
     background: url("./../images/Arrow.png") no-repeat; }
 
 .reviews__checker:checked ~ .reviews__limited-block {
-  max-height: none; }
+  max-height: none;
+  margin-bottom: 15px; }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document

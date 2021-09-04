@@ -347,28 +347,33 @@ template {
     display: none;
 }
 
-.header .container, .main .container, .grid .container, .photos .container, .about .container, .timetable .container {
+.header .container, .main .container, .grid .container, .photos .container, .about .container, .timetable .container, .reviews .container {
     max-width: 1280px;
     padding: 0 15px;
     margin: 0 auto;
 }
 
 @media screen and (min-width: 576px) {
-    .header .container, .main .container, .grid .container, .photos .container, .about .container, .timetable .container {
+    .header .container, .main .container, .grid .container, .photos .container, .about .container, .timetable .container, .reviews .container {
         padding: 0 35px;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .header .container, .main .container, .grid .container, .photos .container, .about .container, .timetable .container {
+    .header .container, .main .container, .grid .container, .photos .container, .about .container, .timetable .container, .reviews .container {
         padding: 0 50px;
     }
 }
 
 @media screen and (min-width: 1280px) {
-    .header .container, .main .container, .grid .container, .photos .container, .about .container, .timetable .container {
+    .header .container, .main .container, .grid .container, .photos .container, .about .container, .timetable .container, .reviews .container {
         padding: 0 70px;
     }
+}
+
+.slider__item-1::before, .slider__item-2::before, .slider__item-3::before, .reviews__block-name::after, .reviews__vector::before, .reviews__button::before, .reviews__button::after {
+    content: '';
+    position: absolute;
 }
 
 @font-face {
@@ -1214,7 +1219,7 @@ ul {
     display: none;
 }
 
-.about__label-wrap-1 {
+.about__wrap-label-1 {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
@@ -1223,7 +1228,7 @@ ul {
 }
 
 @media (min-width: 576px) {
-    .about__label-wrap-1 {
+    .about__wrap-label-1 {
         margin-bottom: 27px;
     }
 }
@@ -1267,18 +1272,18 @@ ul {
     }
 }
 
-.about__label-wrap-2 {
+.about__wrap-label-2 {
     margin-bottom: 27px;
 }
 
 @media (min-width: 576px) {
-    .about__label-wrap-2 {
+    .about__wrap-label-2 {
         margin-bottom: 37px;
     }
 }
 
 @media (min-width: 768px) {
-    .about__label-wrap-2 {
+    .about__wrap-label-2 {
         margin-bottom: 30px;
     }
 }
@@ -1744,7 +1749,7 @@ ul {
 }
 
 .slider {
-    padding: 50px 0;
+    padding-top: 50px;
 }
 
 @media (min-width: 1280px) {
@@ -1786,36 +1791,30 @@ ul {
 }
 
 .slider__item-1::before {
-    content: '';
+    top: 50px;
+    left: 105px;
     width: 66px;
     height: 66px;
     border-radius: 33px;
     background: #FC9B09 url("./../images/map-img-1.png") center no-repeat;
-    position: absolute;
-    top: 50px;
-    left: 105px;
 }
 
 .slider__item-2::before {
-    content: '';
+    top: 50px;
+    left: 105px;
     width: 66px;
     height: 66px;
     border-radius: 33px;
     background: #FC9B09 url("./../images/map-img-2.png") center no-repeat;
-    position: absolute;
-    top: 50px;
-    left: 105px;
 }
 
 .slider__item-3::before {
-    content: '';
+    top: 50px;
+    left: 105px;
     width: 66px;
     height: 66px;
     border-radius: 33px;
     background: #FC9B09 url("./../images/map-img-3.png") center no-repeat;
-    position: absolute;
-    top: 50px;
-    left: 105px;
 }
 
 .slider__checker {
@@ -1844,6 +1843,10 @@ ul {
 }
 
 .slider__limited-block {
+    max-height: 50px;
+    overflow: hidden;
+    margin-bottom: 5px;
+    z-index: 3;
     margin: 0;
 }
 
@@ -1863,6 +1866,7 @@ ul {
 .slider__checker:checked ~ .slider__limited-block {
     max-height: none;
     padding: 10px;
+    background-color: white;
     border: .5px solid #C7C7C7;
 }
 
@@ -1930,6 +1934,266 @@ ul {
     background-color: white;
     border: .5px solid #B3B3B3;
     cursor: pointer;
+}
+
+.reviews__inner {
+    padding-top: 40px;
+}
+
+.reviews__title {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 26px;
+    font-family: "Montserrat-400";
+    line-height: 39px;
+    color: #37373F;
+}
+
+@media (min-width: 768px) {
+    .reviews__title {
+        text-align: left;
+        font-size: 20px;
+        font-family: "Montserrat-500";
+        line-height: 30px;
+        color: #37373F;
+    }
+}
+
+.reviews__title-colon {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .reviews__title-colon {
+        display: inline-block;
+    }
+}
+
+.reviews__item {
+    padding: 30px 0 35px;
+    border: solid #C7C7C7;
+    border-width: 0 0 .5px;
+}
+
+@media (min-width: 768px) {
+    .reviews__item {
+        padding-bottom: 30px;
+    }
+}
+
+.reviews__wrap-1, .reviews__wrap-2 {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.reviews__wrap-1 {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+    .reviews__wrap-1 {
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+}
+
+.reviews__wrap-2 {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .reviews__wrap-2 {
+        margin: 0;
+    }
+}
+
+.reviews__img {
+    width: 85px;
+    height: 85px;
+    margin-right: 18px;
+}
+
+@media (min-width: 768px) {
+    .reviews__img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.reviews__block-name {
+    position: relative;
+    margin-top: 5px;
+}
+
+@media (min-width: 768px) {
+    .reviews__block-name {
+        margin-top: 10px;
+        width: 180px;
+    }
+}
+
+.reviews__block-name::after {
+    bottom: 8px;
+    left: 0;
+    width: 118px;
+    height: 17px;
+    background: url("./../images/stars.png") center no-repeat;
+}
+
+.reviews__text-1 {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-family: "Montserrat-500";
+    line-height: 20px;
+    color: #37373F;
+}
+
+@media (min-width: 768px) {
+    .reviews__text-1 {
+        margin-bottom: 7px;
+        font-size: 18px;
+        font-family: "Montserrat-500";
+        line-height: 22px;
+        color: #37373F;
+    }
+}
+
+.reviews__text-2, .reviews__text-4 {
+    font-size: 14px;
+    font-family: "Montserrat-400";
+    line-height: 21px;
+    color: #37373F;
+}
+
+.reviews__text-3 {
+    font-size: 14px;
+    font-family: "Montserrat-400";
+    line-height: 21px;
+    color: #B3B3B3;
+}
+
+@media (min-width: 768px) {
+    .reviews__text-3 {
+        font-size: 16px;
+        font-family: "Montserrat-400";
+        line-height: 24px;
+        color: #B3B3B3;
+    }
+}
+
+@media (min-width: 768px) {
+    .reviews__text-4 {
+        font-size: 16px;
+        font-family: "Montserrat-400";
+        line-height: 24px;
+        color: #37373F;
+    }
+}
+
+.reviews__paragraph {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .reviews__paragraph {
+        margin: 0 0 10px 120px;
+    }
+}
+
+@media (min-width: 768px) {
+    .reviews__date {
+        margin-left: 120px;
+    }
+}
+
+.reviews__vector {
+    position: relative;
+    padding-left: 20px;
+}
+
+@media (min-width: 768px) {
+    .reviews__vector {
+        -ms-flex-item-align: end;
+        align-self: flex-end;
+        padding-left: 10px;
+    }
+}
+
+.reviews__vector::before {
+    top: 5px;
+    left: 0;
+    width: 15px;
+    height: 12px;
+    background: url("./../images/reviews-img-vector.png") center no-repeat;
+}
+
+@media (min-width: 768px) {
+    .reviews__vector::before {
+        left: -10px;
+    }
+}
+
+.reviews__checker {
+    display: none;
+}
+
+.reviews__limited-block {
+    max-height: 800px;
+    overflow: hidden;
+    margin-bottom: 5px;
+    z-index: 3;
+}
+
+@media (min-width: 576px) {
+    .reviews__limited-block {
+        max-height: 1040px;
+    }
+}
+
+@media (min-width: 768px) {
+    .reviews__limited-block {
+        max-height: 1020px;
+    }
+}
+
+.reviews__wrap-label {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-top: 5px;
+}
+
+.reviews__button {
+    position: relative;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "Montserrat-500";
+    line-height: 25px;
+    color: #5286EC;
+    cursor: pointer;
+}
+
+.reviews__button::before {
+    width: 11px;
+    height: 6px;
+    top: 10px;
+    left: -20px;
+    background: url("./../images/Arrow.png") no-repeat;
+}
+
+.reviews__button::after {
+    width: 11px;
+    height: 6px;
+    top: 10px;
+    right: -20px;
+    background: url("./../images/Arrow.png") no-repeat;
+}
+
+.reviews__checker:checked ~ .reviews__limited-block {
+    max-height: none;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
