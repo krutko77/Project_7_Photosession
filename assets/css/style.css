@@ -429,7 +429,8 @@ ul {
     list-style-type: none;
 }
 
-label:hover, a:hover {
+label:hover,
+a:hover {
     color: turquoise;
 }
 
@@ -715,6 +716,26 @@ label:hover, a:hover {
         line-height: 22px;
         color: white;
     }
+}
+
+.player__container {
+    display: -ms-flexbox;
+    display: flex;
+    background: #ccc;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+}
+
+.player__video {
+    width: 100%;
+}
+
+.player__c-video {
+    width: 100%;
+    max-width: 670px;
 }
 
 .grid {
@@ -1400,25 +1421,19 @@ label:hover, a:hover {
     }
 }
 
-.timetable__text-1 {
+.timetable__date {
+    position: relative;
     text-align: center;
-    font-size: 18px;
-    font-family: "Montserrat-400";
-    line-height: 26px;
-    color: #37373F;
 }
 
 @media (min-width: 576px) {
-    .timetable__text-1 {
+    .timetable__date {
         text-align: left;
+        display: inline-block;
     }
 }
 
-.timetable__calendar {
-    position: relative;
-}
-
-.timetable__calendar::after {
+.timetable__date::after {
     content: '';
     width: 35px;
     height: 35px;
@@ -1432,8 +1447,31 @@ label:hover, a:hover {
 }
 
 @media (min-width: 576px) {
-    .timetable__calendar::after {
+    .timetable__date::after {
         display: inline-block;
+    }
+}
+
+.timetable__text-1 {
+    font-size: 18px;
+    font-family: "Montserrat-400";
+    line-height: 26px;
+    color: #37373F;
+}
+
+.timetable__text-2 {
+    font-size: 13px;
+    font-family: "Montserrat-400";
+    line-height: 19px;
+    color: #37373F;
+}
+
+@media (min-width: 576px) {
+    .timetable__text-2 {
+        font-size: 18px;
+        font-family: "Montserrat-400";
+        line-height: 26px;
+        color: #37373F;
     }
 }
 
@@ -1473,7 +1511,7 @@ label:hover, a:hover {
     }
 }
 
-.timetable__row-1, .timetable__row-2, .timetable__row-3, .timetable__row-4 {
+.timetable__row-1, .timetable__row-2, .timetable__row-3, .timetable__wrap-rating {
     border: solid #C7C7C7;
 }
 
@@ -1516,7 +1554,7 @@ label:hover, a:hover {
 }
 
 .timetable__wrap-rating {
-    padding: 25px 0 50px 67px;
+    padding: 25px 0 25px 65px;
     border-width: 0.5px 1px 1px;
 }
 
@@ -1536,22 +1574,23 @@ label:hover, a:hover {
 }
 
 .timetable__reviews {
-    margin-right: 10px;
+    position: relative;
+    margin-right: 15px;
 }
 
-.timetable__text-2 {
-    font-size: 13px;
-    font-family: "Montserrat-400";
-    line-height: 19px;
-    color: #37373F;
+.timetable__reviews::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -47px;
+    width: 38px;
+    height: 42px;
+    background: url("./../images/grid-img-5.png") no-repeat;
 }
 
 @media (min-width: 576px) {
-    .timetable__text-2 {
-        font-size: 18px;
-        font-family: "Montserrat-400";
-        line-height: 26px;
-        color: #37373F;
+    .timetable__reviews::before {
+        top: -15px;
     }
 }
 

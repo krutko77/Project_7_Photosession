@@ -372,7 +372,8 @@ a {
 ul {
   list-style-type: none; }
 
-label:hover, a:hover {
+label:hover,
+a:hover {
   color: turquoise; }
 
 .header {
@@ -549,6 +550,32 @@ label:hover, a:hover {
         line-height: 22px;
         color: white; } }
 
+.player__container {
+  display: flex;
+  position: relative;
+  background: #ccc;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px; }
+  @media (min-width: 768px) {
+    .player__container {
+      margin-bottom: 42px; } }
+
+.player__video {
+  width: 100%; }
+
+.player__c-video {
+  width: 100%;
+  max-width: 670px; }
+
+.player__controls {
+  display: flex;
+  position: absolute;
+  bottom: -5px;
+  height: 5px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7); }
+
 .grid {
   padding-top: 40px; }
   .grid__inner {
@@ -593,16 +620,6 @@ label:hover, a:hover {
       .grid__title {
         width: 255px;
         margin: 30px 0 10px; } }
-  .grid__img {
-    object-fit: cover;
-    width: 100%;
-    margin-bottom: 30px; }
-    @media (min-width: 576px) {
-      .grid__img {
-        margin-bottom: 35px; } }
-    @media (min-width: 768px) {
-      .grid__img {
-        margin-bottom: 42px; } }
   .grid__text {
     font-size: 14px;
     font-family: "Montserrat-400";
