@@ -325,7 +325,7 @@ template {
     .header .container, .main .container, .grid .container, .photos .container, .about .container, .timetable .container, .reviews .container, .footer .container, .footer__bottom .container {
       padding: 0 70px; } }
 
-.player__button::before, .button-pause::before, .slider__item-1::before, .slider__item-2::before, .slider__item-3::before, .reviews__comment::before, .reviews__button::before, .reviews__button::after, .footer__top::after {
+.player__button::before, button.play::before, button.pause::before, .slider__item-1::before, .slider__item-2::before, .slider__item-3::before, .reviews__comment::before, .reviews__button::before, .reviews__button::after, .footer__top::after {
   content: '';
   position: absolute; }
 
@@ -577,10 +577,11 @@ a:hover {
   background-color: rgba(0, 0, 0, 0.7); }
 
 .player__button {
-  background: none;
+  background-color: transparent;
   border: 0;
   outline: 0;
-  cursor: pointer; }
+  cursor: pointer;
+  display: inline-block; }
   .player__button::before {
     bottom: 30px;
     right: 40px;
@@ -596,12 +597,21 @@ a:hover {
   height: 5px;
   background-color: orangered; }
 
-.button-pause::before {
+button.play::before {
   bottom: 30px;
-  right: 40px;
-  width: 20px;
-  height: 30px;
-  background: url(./../images/pause-button.svg) no-repeat center; }
+  right: 30px;
+  width: 25px;
+  height: 25px;
+  background: url(./../images/play-button.png) no-repeat center;
+  background-size: 100% 100%; }
+
+button.pause::before {
+  bottom: 30px;
+  right: 30px;
+  width: 25px;
+  height: 25px;
+  background: url(./../images/pause-button.png) no-repeat center;
+  background-size: 100% 100%; }
 
 .grid {
   padding-top: 40px; }
