@@ -325,7 +325,7 @@ template {
     .header .container, .main .container, .grid .container, .photos .container, .about .container, .timetable .container, .reviews .container, .footer .container, .footer__bottom .container {
       padding: 0 70px; } }
 
-.slider__item-1::before, .slider__item-2::before, .slider__item-3::before, .reviews__comment::before, .reviews__button::before, .reviews__button::after, .footer__top::after {
+.player__button::before, .button-pause::before, .slider__item-1::before, .slider__item-2::before, .slider__item-3::before, .reviews__comment::before, .reviews__button::before, .reviews__button::after, .footer__top::after {
   content: '';
   position: absolute; }
 
@@ -552,7 +552,6 @@ a:hover {
 
 .player__container {
   display: flex;
-  position: relative;
   background: #ccc;
   justify-content: center;
   align-items: center;
@@ -565,6 +564,7 @@ a:hover {
   width: 100%; }
 
 .player__c-video {
+  position: relative;
   width: 100%;
   max-width: 670px; }
 
@@ -575,6 +575,33 @@ a:hover {
   height: 5px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7); }
+
+.player__button {
+  background: none;
+  border: 0;
+  outline: 0;
+  cursor: pointer; }
+  .player__button::before {
+    bottom: 30px;
+    right: 40px;
+    width: 20px;
+    height: 30px;
+    background: url(./../images/play-button.svg) no-repeat center; }
+
+.player__orange-bar {
+  height: 5px;
+  width: 100%; }
+
+.player__orange-line {
+  height: 5px;
+  background-color: orangered; }
+
+.button-pause::before {
+  bottom: 30px;
+  right: 40px;
+  width: 20px;
+  height: 30px;
+  background: url(./../images/pause-button.svg) no-repeat center; }
 
 .grid {
   padding-top: 40px; }
