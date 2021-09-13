@@ -371,7 +371,7 @@ template {
     }
 }
 
-.player__button::before, button.play::before, button.pause::before, .slider__item-1::before, .slider__item-2::before, .slider__item-3::before, .reviews__comment::before, .reviews__button::before, .reviews__button::after, .footer__top::after {
+.player__button::before, .player button::before, button.play::before, button.pause::before, .slider__item-1::before, .slider__item-2::before, .slider__item-3::before, .reviews__comment::before, .reviews__button::before, .reviews__button::after, .footer__top::after {
     content: '';
     position: absolute;
 }
@@ -755,21 +755,30 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-.player__button {
+.player__button, .player button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
     background-color: transparent;
     border: 0;
     outline: 0;
     cursor: pointer;
-    display: inline-block;
 }
 
-.player__button::before {
+.player__button::before, .player button::before {
     bottom: 30px;
     right: 30px;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     background: url(./../images/play-button.png) no-repeat center;
     background-size: 100% 100%;
+}
+
+@media (min-width: 576px) {
+    .player__button::before, .player button::before {
+        width: 25px;
+        height: 25px;
+    }
 }
 
 .player__orange-bar {
@@ -785,19 +794,33 @@ a:hover {
 button.play::before {
     bottom: 30px;
     right: 30px;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     background: url(./../images/play-button.png) no-repeat center;
     background-size: 100% 100%;
+}
+
+@media (min-width: 576px) {
+    button.play::before {
+        width: 25px;
+        height: 25px;
+    }
 }
 
 button.pause::before {
     bottom: 30px;
     right: 30px;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     background: url(./../images/pause-button.png) no-repeat center;
     background-size: 100% 100%;
+}
+
+@media (min-width: 576px) {
+    button.pause::before {
+        width: 25px;
+        height: 25px;
+    }
 }
 
 .grid {
