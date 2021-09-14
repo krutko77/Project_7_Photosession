@@ -434,6 +434,11 @@ a:hover {
     color: turquoise;
 }
 
+button:active {
+    -webkit-transform: translate(1px, 2px);
+    transform: translate(1px, 2px);
+}
+
 .header {
     background-color: #fff;
 }
@@ -609,7 +614,7 @@ a:hover {
     background-image: url(./../images/price-box.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 36px 0 14px;
+    margin: 36px 0 8px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
@@ -622,7 +627,7 @@ a:hover {
     .main__price-box {
         width: 230px;
         height: 100px;
-        margin: 20px 0 14px;
+        margin: 20px 0 8px;
     }
 }
 
@@ -699,8 +704,6 @@ a:hover {
     color: white;
     -webkit-filter: drop-shadow(0px 4px 70px rgba(255, 255, 255, 0.7)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
     filter: drop-shadow(0px 4px 70px rgba(255, 255, 255, 0.7)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
-    -webkit-transform: translateY(-6px);
-    transform: translateY(-6px);
 }
 
 .main__btn:hover {
@@ -1208,7 +1211,7 @@ button.pause::before {
 }
 
 @media (min-width: 1280px) {
-    .about__block-1 {
+    .about__top {
         padding: 30px 60px 0 0;
         max-width: 460px;
     }
@@ -1268,12 +1271,12 @@ button.pause::before {
     margin-bottom: 10px;
 }
 
-.about__text-center {
-    text-align: center;
+.about__status {
     font-size: 14px;
     font-family: "Montserrat-400";
     line-height: 21px;
     color: #37373F;
+    text-align: center;
     margin-bottom: 10px;
 }
 
@@ -1290,7 +1293,7 @@ button.pause::before {
     margin-bottom: 5px;
 }
 
-.about__block-2 {
+.about__bottom {
     max-width: 590px;
 }
 
@@ -1329,7 +1332,7 @@ button.pause::before {
     max-height: none;
 }
 
-.about__text-2 {
+.about__paragraph {
     margin-bottom: 27px;
 }
 
@@ -1777,7 +1780,7 @@ button.pause::before {
     left: 30px;
 }
 
-.map__item-4-wrap {
+.map__photographer-info {
     padding-left: 30px;
     display: -ms-flexbox;
     display: flex;
@@ -1815,7 +1818,7 @@ button.pause::before {
 .map__checker:checked ~ .map__limited-block {
     max-height: none;
     padding: 10px;
-    border: .5px solid #C7C7C7;
+    border: 0.5px solid #C7C7C7;
 }
 
 /* Стилизация слайдера */
