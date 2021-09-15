@@ -1273,7 +1273,7 @@ button.pause::before {
     position: absolute;
     top: -2px;
     left: 30px; }
-  .map__photographer-info {
+  .map__bottom-inner {
     padding-left: 30px;
     display: flex;
     justify-content: center; }
@@ -1361,18 +1361,23 @@ button.pause::before {
   .slider__inner {
     width: 275px;
     border: 1px solid #C7C7C7;
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding-bottom: 10px; }
     @media (min-width: 576px) {
       .slider__inner {
         width: 400px; } }
   .slider__items {
     width: 275px;
     margin: 0 auto 40px; }
-  .slider__wrap {
-    padding: 0 0 10px 25px;
+  .slider__wrap-bottom {
     display: flex;
+    padding-left: 30px;
     width: 275px;
     margin: 0 auto; }
+    @media (min-width: 576px) {
+      .slider__wrap-bottom {
+        padding-left: 80px;
+        width: 370px; } }
   .slider__item-1, .slider__item-2, .slider__item-3 {
     padding: 135px 0 0;
     height: 195px;
@@ -1416,24 +1421,34 @@ button.pause::before {
     width: 67px;
     height: 67px;
     margin-right: 10px; }
+  .slider__bottom-inner {
+    padding-left: 30px;
+    display: flex;
+    justify-content: center; }
+  .slider__status {
+    margin-bottom: 10px; }
   .slider__limited-block {
     max-height: 50px;
     overflow: hidden;
     margin-bottom: 5px;
     z-index: 3;
-    margin: 0; }
+    margin: 0;
+    width: 180px; }
     @media (min-width: 576px) {
       .slider__limited-block {
-        width: 230px; } }
-  @media (min-width: 576px) {
-    .slider__button {
-      display: block;
-      max-width: 200px; } }
+        width: 210px;
+        padding: 0; } }
+  .slider__button {
+    display: block;
+    max-width: 140px; }
   .slider__checker:checked ~ .slider__limited-block {
     max-height: none;
-    padding: 10px;
     background-color: white;
-    border: .5px solid #C7C7C7; }
+    border: .5px solid #C7C7C7;
+    padding: 0 5px 10px 5px; }
+    @media (min-width: 576px) {
+      .slider__checker:checked ~ .slider__limited-block {
+        padding: 10px; } }
 
 .reviews__inner {
   padding-top: 40px; }
