@@ -417,7 +417,7 @@ template {
 html,
 body {
     font-family: 'Montserrat', sans-serif;
-    font-family: "FontAwesome";
+    min-width: 320px;
 }
 
 a {
