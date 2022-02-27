@@ -1,0 +1,63 @@
+
+/* Стилизация слайдера */
+
+.slick-track {
+   display: flex;
+}
+
+.slick-list {
+   overflow: hidden;
+}
+
+.slider__items {
+   position: relative;
+   padding: 0px;
+}
+
+.slider__items .slick-arrow {
+   position: absolute;
+   top: 50%;
+   margin: -30px 0 0 0;
+   z-index: 2;
+   font-size: 0;
+   width: 20px;
+   height: 40px;
+   border: none;
+   cursor: pointer;
+}
+
+.slider__items .slick-arrow.slick-prev {
+   left: 25px;
+   background: url('./../images/slider-arrow-prew.png') 0 0 no-repeat;
+}
+
+.slider__items .slick-arrow.slick-next {
+   right: 15px;
+   background: url('./../images/slider-arrow-next.png') 0 0 no-repeat
+}
+
+.slider__items .slick-dots {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.slider__items .slick-dots li {
+   list-style: none;
+   margin: 0 5px;
+}
+
+.slider__items .slick-dots li.slick-active button {
+   background-color: #FC9B09;
+   border: none;
+}
+
+.slider__items .slick-dots button {
+   font-size: 0;
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   background-color: white;
+   border: .5px solid #B3B3B3;
+   cursor: pointer;
+}

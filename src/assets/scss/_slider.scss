@@ -1,0 +1,133 @@
+.slider {
+   padding-top: 50px;
+
+   @include media(md) {
+      display: none;
+   }
+
+   &__inner {
+      width: 275px;
+      border: 1px solid #C7C7C7;
+      margin: 0 auto;
+      padding-bottom: 10px;
+
+      @include media(xs) {
+         width: 400px;
+      }
+   }
+
+   &__items {
+      width: 275px;
+      margin: 0 auto 40px;
+   }
+
+   &__wrap-bottom {
+      display: flex;
+      padding-left: 30px;
+      width: 275px;
+      margin: 0 auto;
+
+      @include media(xs) {
+         padding-left: 80px;
+         width: 370px;
+      }
+   }
+
+   &__item-1,
+   &__item-2,
+   &__item-3 {
+      padding: 135px 0 0;
+      height: 195px;
+      position: relative;
+      text-align: center;
+   }
+
+   &__item-1::before {
+      @extend %pseudo;
+      top: 50px;
+      left: 105px;
+      width: 66px;
+      height: 66px;
+      border-radius: 33px;
+      background: $accentColor url("./../images/map-img-1.png") center no-repeat;
+   }
+
+   &__item-2::before {
+      @extend %pseudo;
+      top: 50px;
+      left: 105px;
+      width: 66px;
+      height: 66px;
+      border-radius: 33px;
+      background: $accentColor url("./../images/map-img-2.png") center no-repeat;
+   }
+
+   &__item-3::before {
+      @extend %pseudo;
+      top: 50px;
+      left: 105px;
+      width: 66px;
+      height: 66px;
+      border-radius: 33px;
+      background: $accentColor url("./../images/map-img-3.png") center no-repeat;
+   }
+
+   &__checker {
+      display: none;
+   }
+
+   &__text-1 {
+      @include text(16px, "Montserrat-500", 23px, $textColor);
+      margin-bottom: 5px;
+   }
+
+   &__text-2 {
+      @include text(14px, "Montserrat-400", 20px, $textColor);
+   }
+
+   &__img {
+      width: 67px;
+      height: 67px;
+      margin-right: 10px;
+   }
+
+   &__bottom-inner {
+      padding-left: 30px;
+      display: flex;
+      justify-content: center;
+   }
+
+   &__status {
+      margin-bottom: 10px;
+   }
+
+   &__limited-block {
+      max-height: 50px;
+      overflow: hidden;
+      margin-bottom: 5px;
+      z-index: 3;
+      margin: 0;
+      width: 180px;
+
+      @include media(xs) {
+         width: 210px;
+         padding: 0;
+      }
+   }
+
+   &__button {
+      display: block;
+      max-width: 140px;    
+   }
+
+   &__checker:checked~&__limited-block {
+      max-height: none;
+      background-color: white;
+      border: .5px solid #C7C7C7;
+      padding: 0 5px 10px 5px;
+
+      @include media(xs) {
+         padding: 10px;
+      }
+   }
+}

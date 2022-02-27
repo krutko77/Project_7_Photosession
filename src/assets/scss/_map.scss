@@ -1,0 +1,131 @@
+.map {
+   padding-top: 45px;
+
+   @include media(md) {
+      padding-top: 85px;
+   }
+
+   &__inner {
+      position: relative;
+      height: 425px;
+
+      @include media(xs) {
+         height: 510px;
+      }
+   }
+
+   &__left-block {
+      display: none;
+      width: 420px;
+      height: 470px;
+      background-color: white;
+      border: 1px solid #C7C7C7;
+      position: absolute;
+      top: 20px;
+      left: 70px;
+      padding-top: 55px;
+      z-index: 2;
+
+      @include media(md) {
+         display: block;
+      }
+
+      @include media(lg) {
+         left: 148px;
+      }
+
+      @include media(xl) {
+         left: 390px;
+      }
+   }
+
+   &__text-1 {
+      @include text(18px, "Montserrat-500", 32px, $textColor);
+   }
+
+   &__text-2 {
+      @include text(18px, "Montserrat-400", 32px, $textColor);
+   }
+
+   &__text-3 {
+      @include text(16px, "Montserrat-400", 24px, $textColor);
+      margin-bottom: 10px;
+   }
+
+   &__item-1,
+   &__item-2,
+   &__item-3 {
+      padding-left: 110px;
+      margin-bottom: 30px;
+      position: relative;
+   }
+
+   &__item-1::before {
+      content: '';
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+      background: $accentColor url("./../images/map-img-1.png") center no-repeat;
+      position: absolute;
+      top: -2px;
+      left: 30px;
+   }
+
+   &__item-2::before {
+      content: '';
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+      background: $accentColor url("./../images/map-img-2.png") center no-repeat;
+      position: absolute;
+      top: -2px;
+      left: 30px;
+   }
+
+   &__item-3::before {
+      content: '';
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+      background: $accentColor url("./../images/map-img-3.png") center no-repeat;
+      position: absolute;
+      top: -2px;
+      left: 30px;
+   }
+
+   &__bottom-inner {
+      padding-left: 30px;
+      display: flex;
+      justify-content: center;
+   }
+
+   &__img {
+      width: 67px;
+      height: 67px;
+      margin: 5px 10px 0 0;
+   }
+
+   &__checker {
+      display: none;
+   }
+
+   &__limited-block {
+      max-height: 50px;
+      overflow: hidden;
+      margin-bottom: 5px;
+      background-color: white;
+      z-index: 3;
+   }
+
+   &__button {
+      text-decoration: none;
+      @include text(14px, "Montserrat-500", 21px, $linkColor);
+      cursor: pointer;
+   }
+
+   &__checker:checked~&__limited-block {
+      max-height: none;
+      padding: 10px;
+      border: 0.5px solid #C7C7C7;
+   }
+}

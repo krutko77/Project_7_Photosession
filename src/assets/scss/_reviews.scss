@@ -1,0 +1,225 @@
+.reviews {
+
+   .container {
+      @extend %container;
+   }
+
+   &__inner {
+      padding-top: 40px;
+      // padding-left: 120px;
+      margin: 0 auto;
+
+      @include media(md) {
+         padding-top: 125px;
+      }
+   }
+
+   &__title {
+      text-align: center;
+      margin-bottom: 15px;
+      @include text(26px, "Montserrat-400", 39px, $textColor);
+
+      @include media(sm) {
+         text-align: left;
+         @include text(20px, "Montserrat-500", 30px, $textColor);
+      }
+
+      @include media(md) {
+         margin-bottom: 10px;
+         @include text(28px, "Montserrat-500", 40px, $textColor);
+      }
+
+      @include media(lg) {
+         margin-bottom: 20px;
+         @include text(20px, "Montserrat-500", 30px, $textColor);
+      }
+   }
+
+   &__title-colon {
+      display: none;
+
+      @include media(sm) {
+         display: inline-block;
+      }
+   }
+
+   &__item {
+      position: relative;
+      padding-top: 30px;
+
+      @include media(sm) {
+         padding: 30px 0 0 120px;
+      }
+   }
+
+   &__wrap {
+      display: flex;
+      flex-direction: column;
+      // padding-top: 5px;
+
+      @include media(sm) {
+         flex-direction: row;
+         // padding-top: 12px;
+      }
+   }
+
+   &__main-info {
+      display: flex;
+      margin-bottom:20px;
+
+      @include media(sm) {
+        margin: 0;
+      }
+   }
+
+   &__img {
+      width: 85px;
+      height: 85px;
+      margin-right: 18px;
+
+      @include media(sm) {
+         position: absolute;
+         top: 35px;
+         left: 0;
+         width: 100px;
+         height: 100px;
+      }
+   }
+
+   &__block-info {
+      position: relative;
+      margin-top: 5px;
+
+      @include media(sm) {
+         margin-top: 12px;
+         width: 180px;
+      }
+   }
+
+   &__rating {
+      margin-top: 10px;
+   }
+
+   &__text-1 {
+      margin-bottom: 5px;
+      @include text(16px, "Montserrat-500", 20px, $textColor);
+
+      @include media(sm) {
+         margin-bottom: 10px;
+         @include text(18px, "Montserrat-500", 22px, $textColor);
+      }
+   }
+
+   &__text-2,
+   &__text-4 {
+      @include text(14px, "Montserrat-400", 21px, $textColor);
+   }
+
+   &__text-3 {
+      @include text(14px, "Montserrat-400", 21px, $textColorLight);
+   }
+
+   &__paragraph {
+      margin-bottom: 20px;
+
+      @include media(xs) {
+         margin-bottom: 15px;
+      }
+
+      @include media(sm) {
+         margin-bottom: 15px;
+         @include text(16px, "Montserrat-400", 24px, $textColor);
+      }
+   }
+
+
+   &__content {
+      padding: 16px 0 40px;
+      border: solid #C7C7C7;
+      border-width: 0 0 .5px;
+      max-width: 510px;
+
+      @include media(sm) {
+         padding: 20px 0 30px;
+      }
+   }
+
+   &__comment {
+      position: relative;
+      padding-left: 20px;
+
+      @include media(sm) {
+         align-self: flex-end;
+         padding-left: 5px;
+         // margin: 5px 0;
+      }
+
+      &::before {
+         @extend %pseudo;
+         top: 5px;
+         left: 0;
+         width: 15px;
+         height: 12px;
+         background: url("./../images/reviews-img-vector.png") center no-repeat;
+
+         @include media(sm) {
+            left: -15px;
+         }
+      }
+   }
+
+   &__checker {
+      display: none;
+   }
+
+   &__limited-block {
+      max-height: 805px;
+      overflow: hidden;
+      margin-bottom: 5px;
+      z-index: 3;
+
+      @include media(xs) {
+         max-height: 1045px;
+      }
+
+      @include media(sm) {
+         max-height: 995px;
+      }
+   }
+
+   &__wrap-label {
+      display: flex;
+      justify-content: center;
+      padding-top: 5px;
+   }
+
+   &__button {
+      position: relative;
+      text-decoration: none;
+      @include text(17px, "Montserrat-500", 25px, $linkColor);
+      cursor: pointer;
+
+      &::before {
+         @extend %pseudo;
+         width: 11px;
+         height: 6px;
+         top: 10px;
+         left: -20px;
+         background: url("./../images/Arrow.png") no-repeat;
+      }
+
+      &::after {
+         @extend %pseudo;
+         width: 11px;
+         height: 6px;
+         top: 10px;
+         right: -20px;
+         background: url("./../images/Arrow.png") no-repeat;
+      }
+   }
+
+   &__checker:checked~&__limited-block {
+      max-height: none;
+      margin-bottom: 15px;
+   }
+}

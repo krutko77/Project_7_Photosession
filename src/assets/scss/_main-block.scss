@@ -1,0 +1,139 @@
+.main {
+   background-image: url("./../images/main-bg.jpg");
+   background-size: cover;
+   background-position: 62% 0;
+   color: $primaryColor;
+  
+   @include media(sm) {
+      background-size: auto 143%;
+      background-position: 56% 50%;
+   }
+
+   @include media(md) {
+      background-position: center;
+   }
+
+   @include media(lg) {
+      background-size: auto 154%;
+   }
+
+   .container {
+      @extend %container;
+   }
+
+   &__inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 655px;
+
+      @include media(sm) {
+         height: 840px;
+      }
+   }
+
+   &__title {
+      @include text(32px, "Montserrat-700", 39px, $primaryColor);
+      max-width: 247px;
+      margin: -8px 0 0px;
+
+      @include media(xs) {
+         margin: 12px 0 0px;
+      }
+
+      @include media(sm) {
+         max-width: 596px;
+         font-size: 40px;
+         line-height: 49px;
+         margin: 30px 0 0px;
+      }
+
+      @include media(md) {
+         max-width: 887px;
+         width: 100%;
+      }
+
+      span {
+         color: $accentColor;
+      }
+   }
+
+   &__price-box {
+      height: 93px;
+      width: 208px;
+      background-image: url(./../images/price-box.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 36px 0 8px;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 15px;
+      margin-left: -5px;
+
+      @include media(sm) {
+         width: 230px;
+         height: 100px;
+         margin: 20px 0 8px;
+      }
+   }
+
+   &__price-label {
+       margin-bottom: 5px;
+      @include text(18px, "Montserrat-400", inherit, inherit);
+
+      @include media(sm) {
+         letter-spacing: -0.5px;
+         @include text(20px, "Montserrat-400", inherit, inherit);
+      }
+   }
+
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__price {
+      @include text(30px, "Montserrat-800", inherit, inherit);
+
+      @include media(sm) {
+         @include text(35px, "Montserrat-800", inherit, inherit);
+      }
+   }
+
+   &__percent {
+      border-radius: 50%;
+      filter: drop-shadow(0px 4px 15px rgba(255, 255, 255, 0.25)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
+      max-height: 47px;
+      margin-top: 5px;
+      transform: translateX(4px);
+
+      @include media(sm) {
+         width: 53px;
+         max-height: 53px;
+         transform: translateX(-10px);
+      }
+   }
+
+   &__btn {
+      width: 275px;
+      height: 68px;
+      border: 3px solid $primaryColor;
+      border-radius: 7px;
+      background-color: transparent;
+      cursor: pointer;
+
+      @include text(16px, "Montserrat-900", 20px, white);
+
+      filter: drop-shadow(0px 4px 70px rgba(255, 255, 255, 0.7)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
+      
+      &:hover {
+         color: #727272;
+      }
+
+      @include media(sm) {
+         width: 305px;
+         height: 68px;
+         @include text(18px, "Montserrat-900", 22px, white);
+      }
+   }
+}

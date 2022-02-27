@@ -1,0 +1,172 @@
+.about {
+
+   .container {
+      @extend %container;
+   }
+
+   &__wrap {
+      display: flex;
+      flex-direction: column;
+
+      @include media(sm) {
+         padding-top: 75px;
+      }
+
+      @include media(md) {
+         flex-direction: row-reverse;
+         justify-content: space-between;
+         padding-top: 57px;
+      }
+   }
+
+   &__top {
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include media(md) {
+         padding: 30px 60px 0 0;
+         max-width: 460px;
+      }
+   }
+
+   &__img-wrap {
+      // 
+      position: relative;
+      margin-bottom: 25px;
+
+      &::after {
+         content: '';
+         position: absolute;
+         top: -10px;
+         right: -80px;
+         width: 31px;
+         height: 27px;
+         background: url("./../images/about-heart.png") no-repeat;
+      }
+   }
+
+   &__title {
+      @include text(18px, "Montserrat-500", 22px, $textColor);
+      text-align: center;
+      margin-bottom: 5px;
+   }
+
+   &__subtitle {
+      @include text(18px, "Montserrat-500", 26px, $textColor);
+      margin-bottom: 10px;
+   }
+
+   &__status {
+      @include text(14px, "Montserrat-400", 21px, $textColor);
+      text-align: center;
+      margin-bottom: 10px;
+   }
+
+   &__text {
+      @include text(16px, "Montserrat-400", 24px, $textColor);
+   }
+
+   &__limited-block-1 {
+      max-height: 25px;
+      overflow: hidden;
+      margin-bottom: 5px;
+   }
+
+   &__bottom {
+      max-width: 590px;
+   }
+
+   &__checker-1,
+   &__checker-2,
+   &__checker-3 {
+      display: none;
+   }
+
+   &__wrap-label-1 {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+
+      @include media(xs) {
+         margin-bottom: 27px;
+      }
+   }
+
+   &__button-1 {
+      max-width: 200px;
+      text-align: center;
+      text-decoration: none;
+      @include text(14px, "Montserrat-500", 21px, $linkColor);
+      cursor: pointer;
+   }
+
+   &__checker-1:checked~&__limited-block-1,
+   &__checker-2:checked~&__limited-block-2,
+   &__checker-3:checked~&__limited-block-3 {
+      max-height: none;
+   }
+
+   &__paragraph {
+      margin-bottom: 27px;
+   }
+
+   &__limited-block-2 {
+      max-height: 495px;
+      overflow: hidden;
+      margin-bottom: 17px;
+
+      @include media(xs) {
+         max-height: 325px;
+      }
+
+      @include media(sm) {
+         max-height: 275px;
+      }
+   }
+
+   &__wrap-label-2 {
+      margin-bottom: 27px;
+
+      @include media(xs) {
+         margin-bottom: 37px;
+      }
+
+      @include media(sm) {
+         margin-bottom: 30px;
+      }
+   }
+
+   &__button-2,
+   &__button-3 {
+      position: relative;
+      text-decoration: none;
+      @include text(16px, "Montserrat-500", 23px, $linkColor);
+      cursor: pointer;
+
+      &::before {
+         content: '';
+         width: 11px;
+         height: 6px;
+         position: absolute;
+         top: 8px;
+         right: -20px;
+         background: url("./../images/Arrow.png") no-repeat;
+      }
+   }
+
+   &__limited-block-3 {
+      max-height: 280px;
+      overflow: hidden;
+      margin-bottom: 17px;
+
+      @include media(xs) {
+         max-height: 180px;
+      }
+
+      @include media(sm) {
+         max-height: 150px;
+      }
+   }
+}

@@ -1,0 +1,79 @@
+@import './base/normalize.scss';
+
+@import "./abstracts/vars";
+@import "./abstracts/mixins";
+
+@font-face {
+   font-family: "Montserrat-400";
+   src: url("./../fonts/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+   font-family: "Montserrat-500";
+   src: url("./../fonts/Montserrat-Medium.ttf") format("truetype");
+}
+
+@font-face {
+   font-family: "Montserrat-600";
+   src: url("./../fonts/Montserrat-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+   font-family: "Montserrat-700";
+   src: url("./../fonts/Montserrat-Bold.ttf") format("truetype");
+}
+
+@font-face {
+   font-family: "Montserrat-800";
+   src: url("./../fonts/Montserrat-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+   font-family: "Montserrat-900";
+   src: url("./../fonts/Montserrat-Black.ttf") format("truetype");
+}
+
+*,
+*::after,
+*::before {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html,
+body {
+   font-family: 'Montserrat', sans-serif;
+   min-width: 320px;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+}
+
+ul {
+   list-style-type: none;
+}
+
+label:hover,
+a:hover {
+   color: turquoise;
+}
+
+button:active {
+   transform: translate(1px, 2px);
+}
+
+@import './layout/header';
+@import './main-block';
+@import './components/player';
+@import './layout/grid';
+@import './photos';
+@import './about';
+@import './timetable';
+@import './map';
+@import './components/slick';
+@import './slider';
+@import './reviews';
+@import './layout/footer';

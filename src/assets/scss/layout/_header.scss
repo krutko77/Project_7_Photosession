@@ -1,0 +1,70 @@
+.header {
+   background-color: $primaryColor;
+
+   @include media(sm) {
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+   }
+
+   .container {
+      @extend %container;
+   }
+
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+
+      @include media(sm) {
+         height: 100px;
+      }
+   }
+
+   &__wrap {
+      display: flex;
+      align-items: center;
+   }
+
+   &__logo {
+      margin-right: 45px;
+
+      @include media(xs) {
+         margin-right: 35px;
+      }
+
+      @include media(sm) {
+         height: 25px;
+      }
+   }
+
+   &__city-link {
+      @include text(14px, "Montserrat-400", 17px, $linkColor);
+
+      @include media(xs) {
+         display: none;
+      }
+   }
+
+   &__phone {
+      display: none;
+
+      span {
+         @include text(14px, "Montserrat-400", 17px, $textColorLight);
+      }
+
+      @include media(xs) {
+         display: block;
+      }
+   }
+
+   &__phone-link {
+      @include text(14px, "Montserrat-400", 17px, $textColor);
+   }
+
+   &__user {
+
+      @include media(md) {
+         display: none;
+      }
+   }
+}
