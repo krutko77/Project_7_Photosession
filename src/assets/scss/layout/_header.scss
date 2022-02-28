@@ -28,6 +28,10 @@
    &__logo {
       margin-right: 45px;
 
+      &:hover {
+         opacity: 0.7;
+      }
+
       @include media(xs) {
          margin-right: 35px;
       }
