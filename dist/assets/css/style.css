@@ -477,6 +477,10 @@ button:active {
     margin-right: 45px;
 }
 
+.header__logo:hover {
+    opacity: 0.7;
+}
+
 @media (min-width: 576px) {
     .header__logo {
         margin-right: 35px;
@@ -2372,6 +2376,10 @@ button.pause::before {
     }
 }
 
+.footer__logo:hover {
+    opacity: 0.7;
+}
+
 @media (min-width: 576px) {
     .footer__logo {
         width: 129px;
@@ -2460,6 +2468,10 @@ button.pause::before {
     opacity: 0.6;
     width: 50px;
     height: 50px;
+}
+
+.footer .go-top-icon:hover {
+    opacity: 0.8;
 }
 
 .footer__bottom {

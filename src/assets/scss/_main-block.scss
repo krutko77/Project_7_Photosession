@@ -1,20 +1,28 @@
 .main {
-   background-image: url("./../images/main-bg.jpg");
-   background-size: cover;
-   background-position: 62% 0;
-   color: $primaryColor;
-  
+   padding-top: 60px;
+
    @include media(sm) {
-      background-size: auto 143%;
-      background-position: 56% 50%;
+      padding-top: 100px;
    }
 
-   @include media(md) {
-      background-position: center;
-   }
+   &__wrapper {
+      background-image: url("./../images/main-bg.jpg");
+      background-size: cover;
+      background-position: 62% 0;
+      color: $primaryColor;
 
-   @include media(lg) {
-      background-size: auto 154%;
+      @include media(sm) {
+         background-size: auto 143%;
+         background-position: 56% 50%;
+      }
+
+      @include media(md) {
+         background-position: center;
+      }
+
+      @include media(lg) {
+         background-size: auto 154%;
+      }
    }
 
    .container {
@@ -78,7 +86,7 @@
    }
 
    &__price-label {
-       margin-bottom: 5px;
+      margin-bottom: 5px;
       @include text(18px, "Montserrat-400", inherit, inherit);
 
       @include media(sm) {
@@ -87,7 +95,7 @@
       }
    }
 
-   &__wrapper {
+   &__price-wrap {
       display: flex;
       flex-direction: column;
    }
@@ -125,7 +133,7 @@
       @include text(16px, "Montserrat-900", 20px, white);
 
       filter: drop-shadow(0px 4px 70px rgba(255, 255, 255, 0.7)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
-      
+
       &:hover {
          color: #727272;
       }
