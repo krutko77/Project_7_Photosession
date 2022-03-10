@@ -467,7 +467,7 @@ button:active {
 
 @media (min-width: 768px) {
     .header__inner {
-        height: 100px;
+        height: 80px;
     }
 }
 
@@ -547,7 +547,7 @@ button:active {
 
 @media (min-width: 768px) {
     .main {
-        padding-top: 100px;
+        padding-top: 80px;
     }
 }
 
